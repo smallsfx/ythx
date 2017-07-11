@@ -1,0 +1,36 @@
+<import src="card-template.wxml" />
+
+<!-- 全部页面 -->
+<template name="find-all">
+  <scroll-view scroll-y scroll-with-animation enable-back-to-top style="height:{{scrollHeight}}px;" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50">
+    <block wx:for-items="{{all_items}}" wx:for-index="idx" wx:key="{{item.id}}">
+      <template wx:if="{{item.type == 'ACTIVITY'}}" is="card-activity" data="{{...item}}" />
+      <template wx:elif="{{item.type == 'TRAINING'}}" is="card-training" data="{{...item}}" />
+      <template wx:elif="{{item.type == 'SCHOOL'}}" is="card-school" data="{{...item}}" />
+    </block>
+  </scroll-view>
+</template>
+<!-- 活动页面 -->
+<template name="find-activity">
+  <scroll-view scroll-y scroll-with-animation enable-back-to-top style="height:{{scrollHeight}}px;" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50">
+    <block wx:for-items="{{activity_items}}" wx:for-index="idx" wx:key="{{item.id}}">
+      <template is="card-activity" data="{{...item}}" />
+    </block>
+  </scroll-view>
+</template>
+<!-- 机构页面 -->
+<template name="find-training">
+  <scroll-view scroll-y scroll-with-animation enable-back-to-top style="height:{{scrollHeight}}px;" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50">
+    <block wx:for-items="{{training_items}}" wx:for-index="idx" wx:key="{{item.id}}">
+      <template is="card-training" data="{{...item}}" />
+    </block>
+  </scroll-view>
+</template>
+<!-- 学校页面 -->
+<template name="find-school">
+  <scroll-view scroll-y scroll-with-animation enable-back-to-top style="height:{{scrollHeight}}px;" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50">
+    <block wx:for-items="{{school_items}}" wx:for-index="idx" wx:key="{{item.id}}">
+      <template is="card-school" data="{{...item}}" />
+    </block>
+  </scroll-view>
+</template>

@@ -1,0 +1,60 @@
+<import src="/templates/evaluate.wxml" />
+<!-- 活动卡片模版 -->
+<template name="card-activity">
+  <navigator url="/pages/activity/details/details?id={{id}}">
+    <article class="aui-card-content-padded aui-border-b">
+      <view class="aui-row">
+        <image class='aui-col-12 img-news' src="{{img}}" />
+      </view>
+      <view class="aui-row aui-padded-t-10">
+        <view class="aui-col-10 aui-ellipsis text-header">{{title}}</view>
+        <view class="aui-col-2 aui-text-tip">{{time}}</view>
+      </view>
+      <view class="aui-row aui-padded-t-10">
+        <view class="aui-col-10 aui-ellipsis text-addr">{{addr.desc}}</view>
+        <view class="aui-col-2 aui-text-tip">{{addr.distance}}</view>
+      </view>
+    </article>
+  </navigator>
+</template>
+<!-- 机构卡片模版 -->
+<template name="card-training">
+  <navigator url="/pages/training/details/details?id={{id}}">
+    <article class="aui-card-content-padded aui-border-b">
+      <view class="aui-row">
+        <image class='aui-col-12 img-news' src="{{img}}" />
+      </view>
+      <view class="aui-row aui-padded-t-10">
+        <view class="aui-col-10 aui-ellipsis text-header">{{title}}</view>
+      </view>
+      <view class="aui-row aui-padded-t-10">
+        <view class="aui-col-8">
+          <template is="ctrl-evaluate" data="{{...evaluate}}" />
+        </view>
+        <view class="aui-col-4 aui-text-tip">{{evaluate.count}}人评论</view>
+      </view>
+      <view class="aui-row aui-padded-t-10">
+        <view class="aui-col-10 aui-ellipsis text-addr">{{addr.desc}}</view>
+        <view class="aui-col-2 aui-text-tip">{{addr.distance}}</view>
+      </view>
+    </article>
+  </navigator>
+</template>
+<!-- 学校卡片模版 -->
+<template name="card-school">
+  <navigator url="/pages/school/details/details?id={{id}}">
+    <article class="aui-card-content-padded aui-border-b">
+      <view class="aui-row aui-row-padded">
+        <view class="aui-col-12">
+          <image class='img-news' src="{{img}}" />
+        </view>
+        <view class="aui-col-10 aui-ellipsis text-header">{{title}}</view>
+        <view class="aui-col-2 aui-text-tip">{{time}}</view>
+      </view>
+      <view class="aui-row aui-row-padded">
+        <view class="aui-col-10 text-addr">{{addr.desc}}</view>
+        <view class="aui-col-2 aui-text-tip">{{addr.distance}}</view>
+      </view>
+    </article>
+  </navigator>
+</template>

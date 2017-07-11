@@ -1,0 +1,45 @@
+@import "../../../lib/wxParse/wxParse.wxss";
+.aui-tab-item {
+  width: 33.33%;
+}
+
+swiper-item {
+  background-color: #fff;
+}
+
+.evaluate-name {
+  font-size: 12px;
+  color: #545454;
+}
+
+.evaluate-time {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.evaluate-addr {
+  font-size: 12px;
+  margin-top:20px;
+  color: #ccc;
+}
+
+.evaluate-text {
+  font-size: 14px;
+  color: #545454
+}
+
+.evaluate-head {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+}
+
+.evaluate-left {
+  float: left;
+  width: 50px;
+  margin: 10px;
+}
+
+.evaluate-right {
+  padding-left: 80px;
+}

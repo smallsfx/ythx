@@ -1,0 +1,9 @@
+
+.aui-chat-media>image{
+    width:32px;
+    height:32px;
+}
+.aui-chat-content>image{
+    max-width:100%;
+    max-height:140px;
+}

@@ -1,0 +1,29 @@
+<view id="header">
+  <view class="content">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view class="nickname">{{userInfo.nickName}}</view>
+    <view class="orther">{{userInfo.province}}</view>
+  </view>
+</view>
+<!--我的收藏-->
+<view class="aui-card-header aui-card-arrow aui-border-b animated bounceIn">
+  <text>我的收藏</text>
+</view>
+<!--我的足迹-->
+<view class="aui-card-content-padded aui-card-arrow aui-border-b">
+  <text>我的足迹</text>
+</view>
+<!--我的机构-->
+<view class="aui-card-content-padded aui-card-arrow aui-border-b">
+  <text>我的机构</text>
+</view>
+<!--我的学校-->
+<view class="aui-card-content-padded aui-card-arrow aui-border-b">
+  <text>我的学校</text>
+</view>
+<!--设置-->
+<navigator url="../options/index">
+  <view class="aui-card-content-padded aui-card-arrow aui-border-b">
+    <text>设置</text>
+  </view>
+</navigator>

@@ -1,0 +1,6 @@
+<map
+style="width: 100%; height: {{windowHeight}};"
+latitude="{{latitude}}"
+longitude="{{longitude}}"
+markers="{{markers}}">
+</map>

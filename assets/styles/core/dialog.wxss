@@ -1,0 +1,300 @@
+/*信息提示条*/
+.aui-tips {
+    padding: 0 0.75rem;
+    width: 100%;
+    z-index: 99;
+    height: 1.9rem;
+    line-height: 1.9rem;
+   	position: relative;
+    background-color: rgba(0,0,0,.6);
+    color: #ffffff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    -webkit-align-items: center;
+    		align-items: center;
+}
+.aui-tips .aui-tips-title {
+	padding: 0 0.5rem;
+	font-size: 0.7rem;
+    position: relative;
+    max-width: 100%;
+}
+/*toast*/
+.aui-toast {
+	background: rgba(0, 0, 0, 0.7);
+	text-align: center;
+	border-radius: 0.25rem;
+	color: #ffffff;
+	position: fixed;
+	z-index: 3;
+	top: 45%;
+	left: 50%;
+	width: 7.5em;
+	min-height: 6em;
+	margin-left: -3.75em;
+	margin-top: -4rem;
+	display: none;
+}
+.aui-toast .aui-iconfont {
+	margin-top: 0.2rem;
+	display: block;
+	font-size: 2.6rem;
+}
+.aui-toast-content {
+  margin: 0 0 0.75rem;
+}
+.aui-toast-loading {
+    background-color: #ffffff;
+    border-radius: 100%;
+    margin: 0.75rem 0;
+    -webkit-animation-fill-mode: both;
+        	animation-fill-mode: both;
+    border: 2px solid #ffffff;
+    border-bottom-color: transparent;
+    height: 2.25rem;
+    width: 2.25rem;
+    background: transparent !important;
+    display: inline-block;
+    -webkit-animation: rotate 1s 0s linear infinite;
+        	animation: rotate 1s 0s linear infinite;
+}
+/*dialog*/
+.aui-dialog {
+	width: 13.5rem;
+	text-align: center;
+	position: fixed;
+	z-index: 999;
+	left: 50%;
+	margin-left: -6.75rem;
+	margin-top: 0;
+	top: 45%;
+	border-radius: 0.3rem;
+	opacity: 0;
+	background-color: #ffffff;
+	-webkit-transform: translate3d(0, 0, 0) scale(1.2);
+          	transform: translate3d(0, 0, 0) scale(1.2);
+ 	-webkit-transition-property: -webkit-transform, opacity;
+          	transition-property: transform, opacity;
+    /*display: none;*/
+}
+.aui-dialog-header {
+    padding: 0.5rem 0.75rem 0 0.75rem;
+    text-align: center;
+    font-size: 1em;
+    color: #212121;
+}
+.aui-dialog-body {
+    padding: 0.75rem;
+    overflow: hidden;
+    font-size: 0.875em;
+    color: #757575;
+}
+.aui-dialog-body input {
+	border: 1px solid #dddddd;
+	height: 1.8rem;
+	line-height: 1.8rem;
+	min-height: 1.8rem;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}
+.aui-dialog-footer {
+    position: relative;
+    font-size: 1em;
+    border-top: 1px solid #dddddd;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+	-webkit-justify-content: center;
+			justify-content: center;
+}
+.aui-dialog-btn {
+	position: relative;
+	display: block;
+    width: 100%;
+	padding: 0 0.25rem;
+	height: 2.2rem;
+	font-size: 0.8rem;
+	line-height: 2.2rem;
+	text-align: center;
+	color: #0894ec;
+	border-right: 1px solid #dddddd;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-box-flex: 1;
+}
+.aui-dialog-btn:last-child {
+	border-right: none;
+}
+.aui-dialog.aui-dialog-in {
+	opacity: 1;
+	-webkit-transition-duration: 300ms;
+	      transition-duration: 300ms;
+	-webkit-transform: translate3d(0, 0, 0) scale(1);
+	      transform: translate3d(0, 0, 0) scale(1);
+}
+.aui-dialog.aui-dialog-out {
+	opacity: 0;
+	-webkit-transition-duration: 300ms;
+	      transition-duration: 300ms;
+	-webkit-transform: translate3d(0, 0, 0) scale(0.815);
+	      transform: translate3d(0, 0, 0) scale(0.815);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    .aui-dialog-footer {
+		border: none;
+        background-size: 100% 1px;
+		background-repeat: no-repeat;
+		background-position: top;
+        background-image: linear-gradient(0,#dddddd,#dddddd 50%,transparent 50%);
+        background-image: -webkit-linear-gradient(90deg,#dddddd,#dddddd 50%,transparent 50%);
+	}
+	.aui-dialog-btn {
+		border: none;
+        background-image: -webkit-linear-gradient(0deg, #dddddd, #dddddd 50%, transparent 50%);
+        background-image: linear-gradient(270deg, #dddddd, #dddddd 50%, transparent 50%);
+        background-size: 1px 100%;
+        background-repeat: no-repeat;
+        background-position: right;
+	}
+	.aui-dialog-btn:last-child {
+		border: none;
+        background-size: 0 100%;
+	}
+	.aui-dialog-body input {
+        border: none;
+        background-image: -webkit-linear-gradient(270deg, #dddddd, #dddddd 50%, transparent 50%), -webkit-linear-gradient(180deg, #dddddd, #dddddd 50%, transparent 50%), -webkit-linear-gradient(90deg, #dddddd, #dddddd 50%, transparent 50%), -webkit-linear-gradient(0, #dddddd, #dddddd 50%, transparent 50%);
+        background-image: linear-gradient(180deg, #dddddd, #dddddd 50%, transparent 50%), linear-gradient(270deg, #dddddd, #dddddd 50%, transparent 50%), linear-gradient(0deg, #dddddd, #dddddd 50%, transparent 50%), linear-gradient(90deg, #dddddd, #dddddd 50%, transparent 50%);
+        background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+        background-repeat: no-repeat;
+        background-position: top, right top, bottom, left top;
+    }
+}
+/*popup*/
+.aui-popup {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    position: fixed;
+    height: auto;
+    min-width: 7rem;
+    min-height: 4.5rem;
+    z-index: 999;
+    opacity: 0;
+ 	-webkit-transition-property: -webkit-transform, opacity;
+          	transition-property: transform, opacity;
+}
+.aui-popup.aui-popup-in {
+	opacity: 1;
+	-webkit-transition-duration: 300ms;
+	      transition-duration: 300ms;
+}
+.aui-popup.aui-popup-out {
+	opacity: 0;
+	-webkit-transition-duration: 300ms;
+	      transition-duration: 300ms;
+}
+.aui-popup-right {
+    right: 0.75rem;
+}
+.aui-popup-content {
+    background-color: #ffffff;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    min-height: 4.5rem;
+    height: 100%;
+}
+.aui-popup-top,
+.aui-popup-top-left,
+.aui-popup-top-right {
+    top: 0.45rem;
+}
+.aui-popup-top {
+    left: 50%;
+    margin-left: -3.5rem;
+}
+.aui-popup-top-left {
+    left: 0.45rem;
+}
+.aui-popup-top-right {
+    right: 0.45rem;
+}
+.aui-popup-arrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    -webkit-transform-origin: 50% 50% 0;
+            transform-origin: 50% 50% 0;
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(45deg, #ffffff, #ffffff 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #ffffff, #ffffff 50%, transparent 50%);
+}
+.aui-popup-top .aui-popup-arrow,
+.aui-popup-top-left .aui-popup-arrow,
+.aui-popup-top-right .aui-popup-arrow {
+    top: 0.2rem;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+}
+.aui-popup-top .aui-popup-arrow {
+    left: 50%;
+    margin-left: -0.25rem;
+    margin-top: -0.4rem;
+}
+.aui-popup-top-left .aui-popup-arrow {
+    left: 0.25rem;
+    margin-top: -0.4rem;
+}
+.aui-popup-top-right .aui-popup-arrow {
+    right: 0.25rem;
+    margin-top: -0.4rem;
+}
+.aui-popup-bottom,
+.aui-popup-bottom-left,
+.aui-popup-bottom-right {
+    bottom: 0.45rem;
+}
+.aui-popup-bottom {
+    left: 50%;
+    margin-left: -3.5rem;
+}
+.aui-popup-bottom-left {
+    left: 0.45rem;
+}
+.aui-popup-bottom-right {
+    right: 0.45rem;
+}
+.aui-popup-bottom .aui-popup-arrow,
+.aui-popup-bottom-left .aui-popup-arrow,
+.aui-popup-bottom-right .aui-popup-arrow {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 0.2rem;
+}
+.aui-popup-bottom .aui-popup-arrow {
+    left: 50%;
+    margin-left: -0.25rem;
+    margin-bottom: -0.4rem;
+}
+.aui-popup-bottom-left .aui-popup-arrow {
+    left: 0.25rem;
+    margin-bottom: -0.4rem;
+}
+.aui-popup-bottom-right .aui-popup-arrow {
+    right: 0.25rem;
+    margin-bottom: -0.4rem;
+}
+.aui-popup .aui-list {
+	background: transparent;
+}
+.aui-popup-content .aui-list img {
+	display: block;
+	width: 1rem;
+}

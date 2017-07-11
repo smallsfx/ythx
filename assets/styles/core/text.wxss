@@ -1,0 +1,77 @@
+/*文字对齐*/
+
+.aui-text-left {
+  text-align: left !important;
+}
+
+.aui-text-center {
+  text-align: center !important;
+}
+
+.aui-text-justify {
+  text-align: justify !important;
+}
+
+.aui-text-right {
+  text-align: right !important;
+}
+
+.aui-text-tip {
+  text-align: right !important;
+  font-size: 11px;
+  color: #888;
+}
+
+.aui-text-msg {
+  font-size: 11px;
+  color: #888;
+  padding-top: 15px;
+  padding-bottom: 8px;
+}
+
+.text-msg-right {
+  position: absolute;
+  right: 30px;
+  color: #ccc;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+text {
+  font-size: 30rpx;
+  color: #545454;
+}
+
+.text-header {
+  font-size: 40rpx;
+}
+
+.text-title {
+  font-size: 40rpx;
+}
+
+.text-title::before {
+  content: '';
+  display: inline-block;
+  vertical-align: -6rpx;
+  width: 6rpx;
+  height: 40rpx;
+  background: #FF8A57;
+  margin-right: 8rpx;
+}
+
+
+/*
+*/
+
+.text-addr {
+  color: #999;
+}
+
+.text-desc {
+  color: #999;
+}
+
+.textarea-placeholder {
+  color: #ccc;
+}

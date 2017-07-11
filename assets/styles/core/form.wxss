@@ -1,0 +1,335 @@
+/*
+*表单类\输入框\radio\checkbox
+**/
+.aui-input,
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="time"],
+input[type="number"],
+select,
+textarea {
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 2.2rem;
+    line-height: normal;
+    color: #424242;
+    font-size: 0.8rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    -webkit-user-select: text;
+            user-select: text;
+    -webkit-appearance: none;
+}
+input[type="search"]::-webkit-search-cancel-button {
+	display: none;
+}
+.aui-scroll-x {
+	position: relative;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.aui-scroll-y {
+	position: relative;
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+::-webkit-scrollbar{
+	width:0px;
+}
+
+
+
+
+/*单选、多选、开关*/
+.aui-radio,
+.aui-checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #ffffff;
+    border: solid 1px #dddddd;
+    -webkit-border-radius: 0.6rem;
+    border-radius: 0.6rem;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    cursor: default;
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+            user-select: none;
+    -webkit-transition: background-color ease 0.1s;
+            transition: background-color ease 0.1s;
+}
+.aui-checkbox {
+    border-radius: 0.1rem;
+}
+.aui-radio:checked,
+.aui-radio.aui-checked,
+.aui-checkbox:checked,
+.aui-checkbox.aui-checked {
+    background-color: #03a9f4;
+    border: solid 1px #03a9f4;
+    text-align: center;
+    background-clip: padding-box;
+}
+.aui-radio:checked:before,
+.aui-radio.aui-checked:before,
+.aui-checkbox:checked:before,
+.aui-checkbox.aui-checked:before,
+.aui-radio:checked:after,
+.aui-radio.aui-checked:after,
+.aui-checkbox:checked:after,
+.aui-checkbox.aui-checked:after {
+    content: '';
+    width: 0.5rem;
+    height: 0.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.25rem;
+    margin-top: -0.25rem;
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-top: none;
+    border-right: none;
+    z-index: 2;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.aui-radio:disabled,
+.aui-radio.aui-disabled,
+.aui-checkbox:disabled,
+.aui-checkbox.aui-disabled {
+    background-color: #dddddd;
+    border: solid 1px #dddddd;
+}
+.aui-radio:disabled:before,
+.aui-radio.aui-disabled:before,
+.aui-radio:disabled:after,
+.aui-radio.aui-disabled:after,
+.aui-checkbox:disabled:before,
+.aui-checkbox.aui-disabled:before,
+.aui-checkbox:disabled:after,
+.aui-checkbox.aui-disabled:after {
+    content: '';
+    width: 0.5rem;
+    height: 0.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.25rem;
+    margin-top: -0.25rem;
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-top: none;
+    border-right: none;
+    z-index: 2;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.aui-switch {
+    width: 2.3rem;
+    height: 1.2rem;
+    position: relative;
+    vertical-align: top;
+    border: 1px solid #dddddd;
+    background-color: #dddddd;
+    border-radius: 0.6rem;
+    background-clip: content-box;
+    display: inline-block;
+    outline: none;
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+            user-select: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-background-clip: padding-box;
+    -webkit-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+}
+.aui-switch:before {
+    width: 1.1rem;
+    height: 1.1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.6rem;
+    background-color: #fff;
+    content: '';
+    -webkit-transition: left 0.2s;
+            transition: left 0.2s;
+}
+.aui-switch:checked {
+    border-color: #03a9f4;
+    background-color: #03a9f4;
+}
+.aui-switch:checked:before {
+    left: 1.1rem;
+}
+
+/*滑块*/
+.aui-range {
+    position: relative;
+    display: inline-block;
+}
+.aui-range input[type='range']{
+    height: 0.2rem;
+    border: 0;
+    border-radius: 2px;
+    background-color: #f0f0f0;
+    position: relative;
+    -webkit-appearance: none !important;
+}
+.aui-range input[type='range']::-webkit-slider-thumb {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border-color: #03a9f4;
+    background-color: #03a9f4;
+    -webkit-appearance: none !important;
+}
+.aui-range .aui-range-tip {
+    font-size: 1rem;
+    position: absolute;
+    z-index: 999;
+    top: -1.5rem;
+    width: 2.4rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #666666;
+    border: 1px solid #dddddd;
+    border-radius: 0.3rem;
+    background-color: #ffffff;
+}
+.aui-input-row .aui-range input[type='range'] {
+	width: 90%;
+	margin-left: 5%;
+}
+/*进度条*/
+.aui-progress {
+	width: 100%;
+	height: 1rem;
+	border-radius: 0.2rem;
+	overflow: hidden;
+	background-color: #f0f0f0;
+}
+.aui-progress-bar {
+	float: left;
+	width: 0;
+	height: 100%;
+	font-size: 0.6rem;
+	line-height: 1rem;
+	color: #ffffff;
+	text-align: center;
+	background-color: #03a9f4;
+}
+.aui-progress.sm,
+.aui-progress-sm {
+	height: 0.5rem;
+}
+.aui-progress.sm,
+.aui-progress-sm,
+.aui-progress.sm .aui-progress-bar,
+.aui-progress-sm .aui-progress-bar {
+	border-radius: 1px;
+}
+.aui-progress.xs,
+.aui-progress-xs {
+	height: 0.35rem;
+}
+.aui-progress.xs,
+.aui-progress-xs,
+.aui-progress.xs .progress-bar,
+.aui-progress-xs .progress-bar {
+	border-radius: 1px;
+}
+.aui-progress.xxs,
+.aui-progress-xxs {
+	height: 0.15rem;
+}
+.aui-progress.xxs,
+.aui-progress-xxs,
+.aui-progress.xxs .progress-bar,
+.aui-progress-xxs .progress-bar {
+	border-radius: 1px;
+}
+
+/*时间轴*/
+.aui-timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+.aui-timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1.85rem;
+    width: 2px;
+    height: 100%;
+    background: #ececec;
+    z-index: 0;
+}
+.aui-timeline .aui-timeline-item {
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+.aui-timeline .aui-timeline-item-header {
+	background-color: #ececec;
+	padding: 0.2rem 0.5rem;
+	margin: 0.75rem;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-size: 0.7rem;
+}
+.aui-timeline .aui-timeline-item-label {
+    width: 2.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.7em;
+    background-color: #ececec;
+    position: absolute;
+    text-align: center;
+    left: 0.75rem;
+    top: 0;
+}
+.aui-timeline .aui-timeline-item-label-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    background-color: #ececec;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    left: 1.15rem;
+    top: 0;
+}
+.aui-timeline .aui-timeline-item-inner {
+    margin-left: 3.75rem;
+    margin-right: 0.75rem;
+    padding: 0;
+    position: relative;
+}

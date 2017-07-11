@@ -1,0 +1,32 @@
+<import src="/templates/find-template.wxml" />
+	<view class="search-flex {{scrolltop>200?'tophide':''}}">
+		<view class="search-bar">
+			<input type="text" maxlength="12" placeholder="请输入关键字查询" bindinput="inputSearch"></input>
+			<button class="search-btn" bindtap="submitSearch" wx:if="{{showsearch}}">搜索</button>
+		</view>
+	</view>
+<view class="aui-tab">
+  <view class="aui-tab-item {{currentTab==0 ? 'aui-active' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+  <view class="aui-tab-item {{currentTab==1 ? 'aui-active' : ''}}" data-current="1" bindtap="swichNav">活动</view>
+  <view class="aui-tab-item {{currentTab==2 ? 'aui-active' : ''}}" data-current="2" bindtap="swichNav">机构</view>
+  <view class="aui-tab-item {{currentTab==3 ? 'aui-active' : ''}}" data-current="3" bindtap="swichNav">学校</view>
+</view>
+
+<swiper current="{{currentTab}}" class="aui-tab-box" duration="300" style="height:{{list.scrollHeight}}px" bindchange="bindChange">
+  <!-- 全部页面 -->
+  <swiper-item>
+    <template is="find-all" data="{{...list}}"></template>
+  </swiper-item>
+  <!-- 活动页面 -->
+  <swiper-item>
+    <template is="find-activity" data="{{...list}}"></template>
+  </swiper-item>
+  <!-- 机构页面 -->
+  <swiper-item>
+    <template is="find-training" data="{{...list}}"></template>
+  </swiper-item>
+  <!-- 学校页面 -->
+  <swiper-item>
+    <template is="find-school" data="{{...list}}"></template>
+  </swiper-item>
+</swiper>

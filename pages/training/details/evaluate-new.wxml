@@ -1,0 +1,63 @@
+<import src="/templates/evaluate.wxml" />
+<!--机构评分-->
+<view class="aui-card-content-padded">
+  <text class="text-header">{{title}}</text>
+  <view class="aui-row aui-padded-t-10">
+    <view class="aui-col-4 center">效果</view>
+    <view class="aui-col-8">
+      <template is="ctrl-evaluate" />
+    </view>
+  </view>
+  <view class="aui-row aui-padded-t-10">
+    <view class="aui-col-4 center">环境</view>
+    <view class="aui-col-8">
+      <template is="ctrl-evaluate" />
+    </view>
+  </view>
+  <view class="aui-row aui-padded-t-10">
+    <view class="aui-col-4 center">师资</view>
+    <view class="aui-col-8">
+      <template is="ctrl-evaluate" />
+    </view>
+  </view>
+</view>
+<!--讲师评分-->
+<view class="aui-card-content-padded">
+  <text class="text-header">张老师</text>
+  <view class="aui-row aui-padded-t-10">
+    <view class="aui-col-4 center">表达</view>
+    <view class="aui-col-8">
+      <template is="ctrl-evaluate" />
+    </view>
+  </view>
+  <view class="aui-row aui-padded-t-10">
+    <view class="aui-col-4 center">形象</view>
+    <view class="aui-col-8">
+      <template is="ctrl-evaluate" />
+    </view>
+  </view>
+</view>
+<!--评价内容-->
+<view class="aui-card-content-padded aui-border-t">
+  <view class="aui-row">
+    <textarea placeholder="亲，课程怎么样，老师好不好，环境如何，学习效果吗？" />
+  </view>
+  <view class="aui-row aui-text-right">
+    <text class=""> 加油，还差15个字！</text>
+  </view>
+</view>
+<!--上传照片-->
+<view class="aui-card-content-padded aui-border-b aui-border-t">
+  <view class="aui-row" style="justify-content: center;">
+    <view class="aui-col-4">
+      <image bindtap="onChooseImage" src="/assets/images/upimg.png" class="round-rect-img-up" />
+    </view>
+    <view class="aui-col-8">
+      <view class="aui-row">上传照片</view>
+      <view class="aui-row">3张以上有机会获得100积分</view>
+    </view>
+  </view>
+</view>
+<view class="aui-card-header nobg">
+  <button class="aui-active">发表</button>
+</view>

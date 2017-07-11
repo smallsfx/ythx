@@ -1,0 +1,16 @@
+<import src="/templates/msg-template.wxml"/>
+<view class="aui-tab">
+  <view class="aui-tab-item {{currentTab==0 ? 'aui-active' : ''}}" data-current="0" bindtap="swichNav">消息</view>
+  <view class="aui-tab-item {{currentTab==1 ? 'aui-active' : ''}}" data-current="1" bindtap="swichNav">通讯录</view>
+</view>
+
+<swiper current="{{currentTab}}" class="aui-tab-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <!-- 消息界面 -->
+  <swiper-item>
+    <template is="msg-text" ></template>
+  </swiper-item>
+  <!-- 通讯录界面 -->
+  <swiper-item>
+    <template is="msg-contacts" ></template>
+  </swiper-item>
+</swiper>

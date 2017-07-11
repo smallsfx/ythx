@@ -1,0 +1,55 @@
+<!-- 机构评论模版 -->
+<import src="evaluate.wxml" />
+<template name="details-training-evaluate">
+  <navigator url="/pages/training/details/evaluate-new?id={{data.id}}">
+    <view class="aui-card-header aui-card-arrow aui-border-b aui-border-b">
+      发表评论
+    </view>
+  </navigator>
+  <block wx:for="{{data.evaluates}}" wx:key="{{evaluate.id}}" wx:for-item='evaluate'>
+    <view class="aui-card-content-padded aui-border-b">
+      <view class="aui-row aui-row-padded">
+        <view class="evaluate-left">
+          <image class='evaluate-head' src="{{evaluate.img}}" />
+          <view class="aui-row">
+            <block wx:if="{{evaluate.thumbupOn}}">
+              <image class='evaluate-head' src="/assets/images/thumb-up-hl.png" />
+            </block>
+            <block wx:else>
+              <image class='evaluate-head' src="/assets/images/thumb-up.png" />
+            </block>
+          </view>
+          <view class="aui-row center">
+            <text>{{evaluate.thumbup}}</text>
+          </view>
+        </view>
+        <view class="evaluate-right">
+          <view class="aui-row">
+            <view class="aui-col-6">
+              <view class="evaluate-name">{{evaluate.name}}</view>
+              <view class="evaluate-time">{{evaluate.time}}</view>
+            </view>
+            <view class="aui-col-6">
+              <template is="ctrl-evaluate" data="{{...evaluate}}" />
+            </view>
+          </view>
+          <view class="aui-row">
+            <view class="evaluate-text">{{evaluate.text}}</view>
+          </view>
+          <view class="aui-row">
+            <block wx:if="{{evaluate.imgs != undefined && evaluate.imgs.length > 0}}">
+              <block wx:for="{{evaluate.imgs}}" wx:key="{{image.id}}" wx:for-item='image'>
+                <image class='evaluate-head aui-col-4' src="{{image.img}}" />
+              </block>
+            </block>
+          </view>
+          <view class="aui-row">
+            <navigator url="/pages/map/map">
+              <view class="evaluate-addr">{{evaluate.addr.desc}}</view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</template>

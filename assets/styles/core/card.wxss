@@ -1,0 +1,85 @@
+/*卡片列表布局*/
+
+.aui-card-header,
+.aui-card-content,
+.aui-card-content-padded,
+.aui-card-footer {
+  background: #fff;
+  position: relative;
+  min-height: 2.5rem;
+  font-size: 14px;
+  color: #212121;
+  word-break: break-all;
+}
+
+.aui-card-header,
+.aui-card-footer {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+article.aui-card-header,
+article.aui-card-footer,
+article.aui-card-content-padded {
+  padding: 5px;
+}
+
+.aui-card-header,
+.aui-card-footer,
+.aui-card-content-padded {
+  padding: 12px 15px;
+}
+
+.aui-card-footer {
+  font-size: 0.7rem;
+  color: #757575;
+  margin-bottom: 20px;
+}
+
+.aui-card-header,
+.aui-card-footer {
+  margin-top: 20px;
+}
+
+.aui-card-content.nobg,
+.aui-card-content-padded.nobg,
+.aui-card-header.nobg {
+  background-color: transparent;
+}
+
+.aui-card-footer.aui-text-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.aui-card-arrow:before {
+  content: '';
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  margin-top: -0.2rem;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-right: none;
+  z-index: 2;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}

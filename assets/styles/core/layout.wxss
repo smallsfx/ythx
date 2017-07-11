@@ -1,0 +1,106 @@
+.center {
+	align-content: center;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/*对齐,显示，隐藏等*/
+
+.aui-pull-right {
+	float: right !important;
+}
+
+.aui-pull-left {
+	float: left !important;
+}
+
+img.aui-img-round {
+	border-radius: 50%;
+}
+
+/*栅格类*/
+
+.aui-row {
+	overflow: hidden;
+	margin: 0;
+}
+
+.aui-row-padded {
+	margin-left: -0.125rem;
+	margin-right: -0.125rem;
+}
+
+.aui-row-padded [class*=aui-col-] {
+	padding: 0.125rem;
+}
+
+.aui-col-1,
+.aui-col-2,
+.aui-col-3,
+.aui-col-4,
+.aui-col-5,
+.aui-col-6,
+.aui-col-7,
+.aui-col-8,
+.aui-col-9,
+.aui-col-10,
+.aui-col-11,
+.aui-col-5 {
+	position: relative;
+	float: left;
+}
+
+.aui-col-12 {
+	width: 100%;
+	position: relative;
+}
+
+.aui-col-11 {
+	width: 91.66666667%;
+}
+
+.aui-col-10 {
+	width: 83.33333333%;
+}
+
+.aui-col-9 {
+	width: 75%;
+}
+
+.aui-col-8 {
+	width: 66.66666667%;
+}
+
+.aui-col-7 {
+	width: 58.33333333%;
+}
+
+.aui-col-6 {
+	width: 50%;
+}
+
+.aui-col-5 {
+	width: 41.66666667%;
+}
+
+.aui-col-4 {
+	width: 33.33333333%;
+}
+
+.aui-col-3 {
+	width: 25%;
+}
+
+.aui-col-2 {
+	width: 16.66666667%;
+}
+
+.aui-col-1 {
+	width: 8.33333333%;
+}
+
+.aui-col-5 {
+	width: 20%;
+}

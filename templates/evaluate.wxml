@@ -1,0 +1,32 @@
+<template name="ctrl-evaluate">
+  <block wx:if="{{rate > 0}}">
+    <image class="img-start" src="/assets/images/start-hl.png" />
+  </block>
+  <block wx:else>
+    <image class="img-start" src="/assets/images/start.png" />
+  </block>
+  <block wx:if="{{rate > 1}}">
+    <image class="img-start" src="/assets/images/start-hl.png" />
+  </block>
+  <block wx:else>
+    <image class="img-start" src="/assets/images/start.png" />
+  </block>
+  <block wx:if="{{rate > 2}}">
+    <image class="img-start" src="/assets/images/start-hl.png" />
+  </block>
+  <block wx:else>
+    <image class="img-start" src="/assets/images/start.png" />
+  </block>
+  <block wx:if="{{rate > 3}}">
+    <image class="img-start" src="/assets/images/start-hl.png" />
+  </block>
+  <block wx:else>
+    <image class="img-start" src="/assets/images/start.png" />
+  </block>
+  <block wx:if="{{rate > 4}}">
+    <image class="img-start" src="/assets/images/start-hl.png" />
+  </block>
+  <block wx:else>
+    <image class="img-start" src="/assets/images/start.png" />
+  </block>
+</template>

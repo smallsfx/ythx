@@ -1,0 +1,153 @@
+/*标签*/
+.aui-label {
+	display: inline-block;
+	padding: 0.2em 0.25em;
+	font-size: 0.6rem;
+	line-height: 1;
+	color: #616161;
+    background-color: #dddddd;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	border-radius: 0.15em;
+	position: relative;
+}
+
+.aui-label-primary {
+	color: #ffffff;
+	background-color: #00bcd4;
+}
+.aui-label-success {
+	color: #ffffff;
+	background-color: #009688;
+}
+.aui-label-info {
+  color: #ffffff;
+  background-color: #03a9f4;
+}
+.aui-label-warning {
+	color: #ffffff;
+	background-color: #ffc107;
+}
+.aui-label-danger {
+	color: #ffffff;
+	background-color: #e51c23;
+}
+.aui-label-outlined {
+	background-color: transparent;
+	position: relative;
+}
+.aui-label-outlined:after {
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    height: 200%;
+    content: '';
+    width: 200%;
+	border: 1px solid #d9d9d9;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    z-index: 1;
+}
+.aui-label-outlined.aui-label-primary,
+.aui-label-outlined.aui-label-primary:after {
+	color: #00bcd4;
+	border-color: #00bcd4;
+}
+.aui-label-outlined.aui-label-success,
+.aui-label-outlined.aui-label-success:after {
+	color: #009688;
+	border-color: #009688;
+}
+.aui-label-outlined.aui-label-info,
+.aui-label-outlined.aui-label-info:after {
+  	color: #03a9f4;
+  	border-color: #03a9f4;
+}
+.aui-label-outlined.aui-label-warning,
+.aui-label-outlined.aui-label-warning:after {
+	color: #ffc107;
+	border-color: #ffc107;
+}
+.aui-label-outlined.aui-label-danger,
+.aui-label-outlined.aui-label-danger:after {
+	color: #e51c23;
+	border-color: #e51c23;
+}
+.aui-label .aui-iconfont {
+	font-size: 0.6rem;
+}
+
+.aui-swiper-image{
+  width:100%;
+}
+
+/*角标*/
+.aui-badge {
+	display: inline-block;
+	width: auto;
+	text-align: center;
+	min-width: 0.8rem;
+	height: 0.8rem;
+    line-height: 0.8rem;
+    padding: 0 0.2rem;
+    font-size: 0.6rem;
+    color: #ffffff;
+    background-color: #ff2600;
+    border-radius: 0.4rem;
+    position: absolute;
+    top: 0.2rem;
+    left: 60%;
+    z-index: 99;
+}
+.aui-dot {
+	display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: #ff2600;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 0.3rem;
+    right: 20%;
+    z-index: 99;
+}
+
+
+.aui-info {
+	position: relative;
+    padding: 0.5rem 0;
+    font-size: 0.7rem;
+    color: #757575;
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    		box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    		justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    		align-items: center;
+
+}
+.aui-info-item {
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    		align-items: center;
+}
+.aui-info-item > view,.aui-info-item > text,
+.aui-info > view,.aui-info > text {
+	display: inherit;
+	position: relative;
+}

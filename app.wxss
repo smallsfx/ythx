@@ -1,0 +1,2 @@
+@import "assets/styles/index.wxss";
+@import "assets/styles/animate.wxss";

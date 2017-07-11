@@ -1,0 +1,26 @@
+<import src="/templates/details-school.wxml" />
+<import src="/lib/wxParse/wxParse.wxml" />
+<view class="aui-tab">
+  <view class="aui-tab-item {{currentTab==0 ? 'aui-active' : ''}}" data-current="0" bindtap="swichNav">详情</view>
+  <view class="aui-tab-item {{currentTab==1 ? 'aui-active' : ''}}" data-current="1" bindtap="swichNav">评价</view>
+  <view class="aui-tab-item {{currentTab==2 ? 'aui-active' : ''}}" data-current="2" bindtap="swichNav">留言</view>
+</view>
+
+<swiper current="{{currentTab}}" class="aui-tab-box" duration="300" style="height:{{item.scrollHeight}}px" bindchange="bindChange">
+  <!-- 详情页面 -->
+  <swiper-item>
+    <scroll-view scroll-y scroll-with-animation enable-back-to-top style="height:{{item.scrollHeight}}px">
+      <template is="wxParse" data="{{wxParseData:insertData.nodes}}" />
+    </scroll-view>
+  </swiper-item>
+  <!-- 评价页面 -->
+  <swiper-item>
+    <scroll-view scroll-y scroll-with-animation enable-back-to-top style="height:{{item.scrollHeight}}px">
+      <template is="details-school-evaluate" data="{{...item}}"></template>
+    </scroll-view>
+  </swiper-item>
+  <!-- 留言页面 -->
+  <swiper-item>
+    <template is="details-school-evaluate" data="{{...item}}"></template>
+  </swiper-item>
+</swiper>

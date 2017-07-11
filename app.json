@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/home/index/index",
+    "pages/map/map",
+    "pages/find/index",
+    "pages/activity/details/details",
+    "pages/activity/details/details-more",
+    "pages/activity/sign-up-list/sign-up-list",
+    "pages/activity/video-list/video-list",
+    "pages/activity/lushu/lushu",
+    "pages/school/details/details",
+    "pages/school/details/details-more",
+    "pages/training/details/details-more",
+    "pages/school/sign-up-list/sign-up-list",
+    "pages/training/details/details",
+    "pages/training/sign-up-list/sign-up-list",
+    "pages/message/index",
+    "pages/message/talk",
+    "pages/personal/index/index",
+    "pages/training/course-list/course-list",
+    "pages/personal/options/index",
+    "pages/training/details/evaluate-new"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "悦通慧享",
+    "navigationBarBackgroundColor": "#FF8A57",
+    "backgroundColor": "white"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#FF8A57",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "iconPath": "assets/images/icon-home-l.png",
+        "selectedIconPath": "assets/images/icon_home-hl.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/find/index",
+        "iconPath": "assets/images/icon-find-l.png",
+        "selectedIconPath": "assets/images/icon_find-hl.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "iconPath": "assets/images/icon-msg-l.png",
+        "selectedIconPath": "assets/images/icon_msg-hl.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/personal/index/index",
+        "iconPath": "assets/images/icon-my-l.png",
+        "selectedIconPath": "assets/images/icon_my-hl.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

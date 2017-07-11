@@ -1,0 +1,114 @@
+<import src="/templates/evaluate.wxml" />
+<scroll-view scroll-y scroll-with-animation enable-back-to-top style="height:{{scrollHeight}}px">
+
+  <view class="aui-card-content">
+    <image class='img-news' src="{{item.img}}" />
+  </view>
+
+  <view class="aui-card-content-padded aui-border-b">
+    <view class="aui-row aui-row-padded">
+      <view class="aui-col-12 text-header">{{item.title}}</view>
+    </view>
+    <view class="aui-row aui-row-padded">
+      <view class="aui-col-8">
+        <block wx:for-items="{{item.tags}}" wx:key="{{tag.id}}" wx:for-item="tag">
+          <text class="aui-col-3 tag-item">{{tag.text}}</text>
+        </block>
+      </view>
+      <view class="aui-col-4">
+        <view class="aui-col-12 aui-text-right">
+          <text class="text-addr">¥ {{item.signup.money}}</text>
+        </view>
+        <view class="aui-col-12 aui-text-right">
+          <text class="text-addr">{{item.signup.pay}} 人已付款</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 地理位置 -->
+  <navigator url="/pages/map/map?lng={{item.addr.lng}}&lat={{item.addr.lat}}&name={{item.addr.name}}">
+    <view class="aui-card-header aui-card-arrow aui-border-b aui-border-t">
+      <view style="display:flex">
+        <text class="text-addr"> {{item.addr.desc}} </text>
+        <text class="text-msg-right">{{item.addr.distance}}</text>
+      </view>
+    </view>
+  </navigator>
+  <!--报名人数-->
+  <navigator url="../sign-up-list/sign-up-list?id={{item.id}}">
+    <view class="aui-card-content-padded aui-card-arrow">
+      <text class="text-title">累计报名 {{item.signup.count}} 人</text>
+    </view>
+  </navigator>
+  <!--报名人列表-->
+  <view class="aui-card-content-padded aui-border-b">
+    <scroll-view style="width: 100%" scroll-x="true">
+      <view style="display:flex;width: {{scrollWidth}}">
+        <block wx:for-items="{{item.signup.list}}" wx:key="{{user.id}}" wx:for-item="user">
+          <image class='round-img' src="{{user.img}}" style="flex:1" />
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <!--评论-->
+  <navigator url="./details-more?id={{item.id}}">
+    <view class="aui-card-content-padded aui-card-arrow aui-border-b">
+      <template is="ctrl-evaluate" data="{{...item.evaluate}}" />
+      <text class="text-msg-right">{{item.evaluate.count}}人评论</text>
+    </view>
+  </navigator>
+  <!--活动路书-->
+  <navigator url="../lushu/lushu?id={{item.id}}">
+    <view class="aui-card-content-padded aui-card-arrow aui-border-b">
+      <text>查看活动路书</text>
+    </view>
+  </navigator>
+  <!--往期活动直播-->
+  <navigator url="../video-list/video-list?id={{item.id}}">
+    <view class="aui-card-content-padded aui-card-arrow aui-border-b">
+      <text>查看往期活动直播</text>
+    </view>
+  </navigator>
+
+  <view class="aui-card-header aui-border-t">
+    <text class="text-title">活动主办方</text>
+  </view>
+
+  <view class="aui-card-content-padded aui-card-arrow aui-border-b">
+    <view class="aui-row aui-row-padded">
+      <view class="aui-col-3">
+        <image class="round-rect-img" src="{{item.publisher.img}}" />
+      </view>
+      <view class="aui-col-8">
+        <view class="aui-col-11">
+          <text class="text-addr">{{item.publisher.name}}</text>
+        </view>
+        <view class="aui-col-11">
+          <text class="text-addr">{{item.publisher.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <navigator url="./details-more?t=0&id={{item.id}}">
+    <view class="aui-card-footer aui-text-center">
+      查看更多活动信息
+    </view>
+  </navigator>
+
+</scroll-view>
+
+<view class="aui-footbar">
+  <button bindtap="onCall" class="aui-footbar-item">
+    <image src="/assets/images/bar-telphone.png" />
+    <text>电话</text>
+  </button>
+  <button class="aui-footbar-item" open-type="contact">
+    <image src="/assets/images/bar-talk.png" />
+    <text>留言</text>
+  </button>
+  <button class="aui-footbar-item aui-active" bindtap="onSingup">
+    <text>立即报名</text>
+  </button>
+</view>
