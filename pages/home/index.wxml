@@ -4,7 +4,7 @@
 <view class="aui-card-content">
   <view class="aui-row">
     <!--<progress percent="100" stroke-width="2" active color="#3080c0" />-->
-    <swiper indicator-dots="{{indicatorDots}}" style="height:200px" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper autoplay indicator-dots style="height:200px" interval="5000" duration="1000">
       <block wx:for="{{hots}}" wx:key="{{hot.id}}" wx:for-item='hot'>
         <swiper-item>
           <image src="{{hot.img}}" class="aui-swiper-image" />
@@ -27,7 +27,7 @@
 <!--页面主体-->
 
 <block wx:for-items="{{news}}" wx:for-index="idx" wx:key="{{item.id}}">
-  <template wx:if="{{item.type == 'ACTIVITY'}}" is="card-activity" data="{{...item}}" />
-  <template wx:elif="{{item.type == 'TRAINING'}}" is="card-training" data="{{...item}}" />
-  <template wx:elif="{{item.type == 'SCHOOL'}}" is="card-school" data="{{...item}}" />
+  <template wx:if="{{item.type == 'ACTIVITY'}}" is="CARD-ACTIVITY" data="{{...item}}" />
+  <template wx:elif="{{item.type == 'TRAINING'}}" is="CARD-TRAINING" data="{{...item}}" />
+  <template wx:elif="{{item.type == 'SCHOOL'}}" is="CARD-SCHOOL" data="{{...item}}" />
 </block>

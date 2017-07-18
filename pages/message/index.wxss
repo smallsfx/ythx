@@ -1,19 +1,113 @@
-.aui-tab-item{
-    width:50%;
+.aui-tab-item {
+  width: 50%;
 }
 
-.initials{
-    position: fixed;
-    top: 47px;
-    right: 0px;
-    height: 100%;
-    width: 15px;
-    padding-right: 10px;
-    text-align: center;
-    font-size: 12px;
-    z-index: 99;
-    background: rgba(145,145,145,0);
+scroll-view {
+  background-color: #fff;
 }
-.initials li img{
-    width: 14px;
+
+.aui-charset-lilt {
+  position: fixed;
+  right: 0;
+  top: 20rpx;
+  width: 40rpx;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* 
+  min-height: 400px; */
+}
+
+.aui-charset-lilt>view {
+  line-height: 40rpx;
+}
+
+.aui-msglist-list {
+  position: relative;
+  font-size: 0.8rem;
+  background-color: #fff;
+}
+
+.aui-msglist-list-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 0.75rem;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  min-height: 2.2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.aui-msglist-list-item>.aui-avatar {
+  position: relative;
+  margin: 0.75rem 0.75rem 0.75rem 0;
+}
+
+.aui-msglist-list-item>.aui-content {
+  position: absolute;
+  left: 70px;
+}
+
+.aui-msglist-list-item>.aui-content .aui-content-text {
+  font-size: 30rpx;
+  color: #aaa;
+}
+
+.aui-msglist-list-item>.aui-content-right {
+  top: 0.75rem;
+  margin-right: 0.75rem;
+  text-align: right;
+  color: #ccc;
+  font-size: 25rpx;
+}
+
+.aui-msglist-list-item .aui-avatar image {
+  width: 40px !important;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.aui-msglist-list-item .aui-avatar .aui-avatar-group {
+  width: 40px;
+  height:40px;
+  background-color: #eee;
+  border-radius: 4px;
+  padding-right: 2px;
+  padding-bottom:2px;
+  line-height:16px;
+}
+
+.aui-msglist-list-item .aui-avatar .aui-avatar-group image {
+  width: 16px !important;
+  height: 16px;
+  border-radius: 2px;
+  margin-left:2px;
+  margin-top:2px;
+}
+
+.aui-badge {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  min-width: 0.8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  padding: 0 0.2rem;
+  font-size: 0.6rem;
+  color: #ffffff;
+  background-color: #ff2600;
+  border-radius: 0.4rem;
+  position: absolute;
+  top: -0.2rem;
+  right: -0.2rem;
+  z-index: 99;
 }

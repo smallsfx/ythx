@@ -1,6 +1,5 @@
 // details.js
-
-var active = require('../../../function/active.js');
+var active = require('../../../lib/core/active');
 const tabbar_height = 50;
 
 Page({

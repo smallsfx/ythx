@@ -1,6 +1,8 @@
 /*tab切换类*/
 
+
 /*TAB 选项卡容器样式*/
+
 .aui-tab {
   width: 100%;
   border-bottom: 2rpx solid #cccccc;
@@ -8,22 +10,115 @@
   line-height: 80rpx;
   background-color: #fff;
 }
+
+
 /*TAB 选项卡样式*/
+
 .aui-tab-item {
   font-size: 40rpx;
   display: inline-block;
   width: 25%;
   color: #545454;
 }
+
+
 /*TAB 选项卡 选中状态*/
+
 .aui-tab-item.aui-active {
   color: #FF8A57;
   border-bottom: 5rpx solid #FF8A57;
 }
+
+
 /*TAB 内容容器样式*/
+
 .aui-tab-box {
   display: block;
   height: 100%;
   width: 100%;
   overflow: hidden;
+}
+
+
+/*menu类*/
+
+
+/*MENU 选项卡容器样式*/
+
+.aui-menu {
+  width: 100%;
+  border-bottom: 2rpx solid #cccccc;
+  text-align: center;
+  background-color: #fff;
+}
+
+
+/*MENU 菜单项样式*/
+
+.aui-menu-item {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 25%;
+  color: #545454;
+  margin: 15rpx 0;
+}
+
+.aui-menu-item+.aui-menu-item {
+  border-left: solid 1rpx #ccc;
+}
+
+
+/* .aui-menu-item{
+  
+} */
+
+
+/*MENU 菜单项 选中状态*/
+
+.aui-menu-item.aui-active {
+  color: #FF8A57;
+  border-bottom: 5rpx solid #FF8A57;
+}
+
+
+/*TAB 内容容器样式*/
+
+.aui-menu-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  font-size: 30rpx;
+  color: #545454;
+  z-index: 1000;
+  display: none;
+  overflow: hidden;
+  padding: 15rpx;
+  border: 1rpx solid #ccc;
+  margin: 5rpx;
+  /* margin-top: 0; */
+  /* border-top: none; */
+}
+
+.aui-menu-content.aui-active {
+  display: block;
+}
+
+.aui-menu-content>view {
+  width: 45%;
+  display: inline-block;
+  border: solid 1rpx #ccc;
+  margin: 5rpx;
+  border-radius: 15rpx;
+  line-height: 80rpx;
+}
+
+.aui-menu-content>view.aui-active {
+  background-color: #FF8A57;
+  color: #fff;
+}
+
+.aui-menu-content>view.aui-active {
+  background-color: #FF8A57;
+  color: #fff;
 }

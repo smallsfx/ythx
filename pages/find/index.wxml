@@ -1,32 +1,56 @@
-<import src="/templates/find-template.wxml" />
-	<view class="search-flex {{scrolltop>200?'tophide':''}}">
-		<view class="search-bar">
-			<input type="text" maxlength="12" placeholder="请输入关键字查询" bindinput="inputSearch"></input>
-			<button class="search-btn" bindtap="submitSearch" wx:if="{{showsearch}}">搜索</button>
-		</view>
-	</view>
-<view class="aui-tab">
-  <view class="aui-tab-item {{currentTab==0 ? 'aui-active' : ''}}" data-current="0" bindtap="swichNav">全部</view>
-  <view class="aui-tab-item {{currentTab==1 ? 'aui-active' : ''}}" data-current="1" bindtap="swichNav">活动</view>
-  <view class="aui-tab-item {{currentTab==2 ? 'aui-active' : ''}}" data-current="2" bindtap="swichNav">机构</view>
-  <view class="aui-tab-item {{currentTab==3 ? 'aui-active' : ''}}" data-current="3" bindtap="swichNav">学校</view>
+<import src="/templates/card-template.wxml" />
+
+<view class="search-flex {{showsearchbar?'':'tophide'}}">
+  <view class="search-bar">
+    <input type="text" maxlength="12" placeholder="请输入关键字查询" bindinput="inputSearch"></input>
+    <button class="search-btn {{showsearchbutton?'':'hide'}}" bindtap="submitSearch">搜索</button>
+  </view>
 </view>
 
-<swiper current="{{currentTab}}" class="aui-tab-box" duration="300" style="height:{{list.scrollHeight}}px" bindchange="bindChange">
+<view class="aui-tab">
+  <view class="aui-tab-item {{tab=='ALL' ? 'aui-active' : ''}}" data-tab="ALL" bindtap="swichNav">全部</view>
+  <view class="aui-tab-item {{tab=='ACTIVITY' ? 'aui-active' : ''}}" data-tab="ACTIVITY" bindtap="swichNav">活动</view>
+  <view class="aui-tab-item {{tab=='TRAINING' ? 'aui-active' : ''}}" data-tab="TRAINING" bindtap="swichNav">机构</view>
+  <view class="aui-tab-item {{tab=='SCHOOL' ? 'aui-active' : ''}}" data-tab="SCHOOL" bindtap="swichNav">学校</view>
+</view>
+
+<swiper current="{{tabindex}}" class="aui-tab-box" duration="300" style="height:{{tabHeight}}" bindchange="bindChange">
   <!-- 全部页面 -->
   <swiper-item>
-    <template is="find-all" data="{{...list}}"></template>
+    <scroll-view scroll-y scroll-with-animation enable-back-to-top style="height:{{scrollHeight}}px;" scroll-top="{{scrolltop}}"
+      bindscroll="scrollHandle" lower-threshold="50">
+      <block wx:for-items="{{items}}" wx:for-index="idx" wx:key="{{item.id}}">
+        <template wx:if="{{item.type == 'ACTIVITY'}}" is="CARD-ACTIVITY" data="{{...item}}" />
+        <template wx:elif="{{item.type == 'TRAINING'}}" is="CARD-TRAINING" data="{{...item}}" />
+        <template wx:elif="{{item.type == 'SCHOOL'}}" is="CARD-SCHOOL" data="{{...item}}" />
+      </block>
+    </scroll-view>
   </swiper-item>
   <!-- 活动页面 -->
-  <swiper-item>
-    <template is="find-activity" data="{{...list}}"></template>
-  </swiper-item>
-  <!-- 机构页面 -->
-  <swiper-item>
-    <template is="find-training" data="{{...list}}"></template>
-  </swiper-item>
-  <!-- 学校页面 -->
-  <swiper-item>
-    <template is="find-school" data="{{...list}}"></template>
-  </swiper-item>
+
+  <block wx:for-items="{{menus}}" wx:key="{{menuItem}}" wx:for-item="menuItem">
+    <swiper-item>
+      <view class="aui-menu">
+        <block wx:for-items="{{menuchildren}}" wx:key="{{menuChildItem}}" wx:for-item="menuChildItem">
+          <view class="aui-menu-item" data-menu="{{menuChildItem}}" bindtap="switchMenu">
+            {{filters[menuItem][menuChildItem].text}}
+          </view>
+        </block>
+        <block wx:for-items="{{menuchildren}}" wx:key="{{menuChildItem}}" wx:for-item="menuChildItem">
+          <view class="aui-menu-content {{menu==menuChildItem ? 'aui-active' : ''}}">
+            <block wx:for-items="{{filterConst[menuItem][menuChildItem]}}" wx:key="{{option.id}}" wx:for-item="option">
+              <view bindtap="switchMenuOption" data-id="{{option.id}}" data-text="{{option.text}}" data-type="{{menuItem}}" data-option="{{menuChildItem}}"
+                class="{{ (filters[menuItem][menuChildItem].id==option.id) ? 'aui-active': ''}}">{{option.text}}</view>
+            </block>
+          </view>
+        </block>
+      </view>
+      <scroll-view scroll-y scroll-with-animation enable-back-to-top style="height:{{scrollHeight}}px;" scroll-top="{{scrolltop}}"
+        bindscroll="scrollHandle" lower-threshold="50">
+        <block wx:for-items="{{items}}" wx:for-index="idx" wx:key="{{item.id}}">
+          <template is="{{'CARD-'+menuItem}}" data="{{...item}}" />
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </block>
 </swiper>

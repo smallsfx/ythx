@@ -27,19 +27,14 @@
   </view>
 
   <!-- 地理位置 -->
-  <navigator url="/pages/map/map?lng={{item.addr.lng}}&lat={{item.addr.lat}}&name={{item.addr.name}}">
-    <view class="aui-card-header aui-card-arrow aui-border-b aui-border-t">
-      <view style="display:flex">
-        <text class="text-addr"> {{item.addr.desc}} </text>
-        <text class="text-msg-right">{{item.addr.distance}}</text>
-      </view>
-    </view>
+  <navigator url="/pages/map/map?lng={{item.addr.lng}}&lat={{item.addr.lat}}&name={{item.addr.name}}" class="aui-card-header aui-card-arrow aui-border-b aui-border-t">
+    <text class="text-addr"> {{item.addr.desc}} </text>
+    <text class="text-msg-right">{{item.addr.distance}}</text>
+
   </navigator>
   <!--报名人数-->
-  <navigator url="../sign-up-list/sign-up-list?id={{item.id}}">
-    <view class="aui-card-content-padded aui-card-arrow">
-      <text class="text-title">累计报名 {{item.signup.count}} 人</text>
-    </view>
+  <navigator url="../sign-up-list/sign-up-list?id={{item.id}}" class="aui-card-content-padded aui-card-arrow">
+    <text class="text-title">累计报名 {{item.signup.count}} 人</text>
   </navigator>
   <!--报名人列表-->
   <view class="aui-card-content-padded aui-border-b">
@@ -52,23 +47,17 @@
     </scroll-view>
   </view>
   <!--评论-->
-  <navigator url="./details-more?id={{item.id}}">
-    <view class="aui-card-content-padded aui-card-arrow aui-border-b">
-      <template is="ctrl-evaluate" data="{{...item.evaluate}}" />
-      <text class="text-msg-right">{{item.evaluate.count}}人评论</text>
-    </view>
+  <navigator url="./details-more?id={{item.id}}" class="aui-card-content-padded aui-card-arrow aui-border-b">
+    <template is="ctrl-evaluate" data="{{...item.evaluate}}" />
+    <text class="text-msg-right">{{item.evaluate.count}}人评论</text>
   </navigator>
   <!--活动路书-->
-  <navigator url="../lushu/lushu?id={{item.id}}">
-    <view class="aui-card-content-padded aui-card-arrow aui-border-b">
-      <text>查看活动路书</text>
-    </view>
+  <navigator url="../lushu/lushu?id={{item.id}}" class="aui-card-content-padded aui-card-arrow aui-border-b">
+    <text>查看活动路书</text>
   </navigator>
   <!--往期活动直播-->
-  <navigator url="../video-list/video-list?id={{item.id}}">
-    <view class="aui-card-content-padded aui-card-arrow aui-border-b">
-      <text>查看往期活动直播</text>
-    </view>
+  <navigator url="../video-list/video-list?id={{item.id}}" class="aui-card-content-padded aui-card-arrow aui-border-b">
+    <text>查看往期活动直播</text>
   </navigator>
 
   <view class="aui-card-header aui-border-t">
@@ -91,10 +80,8 @@
     </view>
   </view>
 
-  <navigator url="./details-more?t=0&id={{item.id}}">
-    <view class="aui-card-footer aui-text-center">
-      查看更多活动信息
-    </view>
+  <navigator url="./details-more?t=0&id={{item.id}}" class="aui-card-footer aui-text-center">
+    查看更多活动信息
   </navigator>
 
 </scroll-view>

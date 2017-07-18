@@ -1,24 +1,24 @@
 <import src="/templates/evaluate.wxml" />
 <!-- 活动卡片模版 -->
-<template name="card-activity">
+<template name="CARD-ACTIVITY">
   <navigator url="/pages/activity/details/details?id={{id}}">
     <article class="aui-card-content-padded aui-border-b">
       <view class="aui-row">
         <image class='aui-col-12 img-news' src="{{img}}" />
       </view>
       <view class="aui-row aui-padded-t-10">
-        <view class="aui-col-10 aui-ellipsis text-header">{{title}}</view>
-        <view class="aui-col-2 aui-text-tip">{{time}}</view>
+        <text class="aui-col-10 aui-ellipsis text-header">{{title}}</text>
+        <text class="aui-col-2 aui-text-tip">{{time}}</text>
       </view>
       <view class="aui-row aui-padded-t-10">
-        <view class="aui-col-10 aui-ellipsis text-addr">{{addr.desc}}</view>
-        <view class="aui-col-2 aui-text-tip">{{addr.distance}}</view>
+        <text class="aui-col-10 aui-ellipsis text-addr">{{addr.desc}}</text>
+        <text class="aui-col-2 aui-text-tip">{{addr.distance}}</text>
       </view>
     </article>
   </navigator>
 </template>
 <!-- 机构卡片模版 -->
-<template name="card-training">
+<template name="CARD-TRAINING">
   <navigator url="/pages/training/details/details?id={{id}}">
     <article class="aui-card-content-padded aui-border-b">
       <view class="aui-row">
@@ -41,7 +41,7 @@
   </navigator>
 </template>
 <!-- 学校卡片模版 -->
-<template name="card-school">
+<template name="CARD-SCHOOL">
   <navigator url="/pages/school/details/details?id={{id}}">
     <article class="aui-card-content-padded aui-border-b">
       <view class="aui-row aui-row-padded">

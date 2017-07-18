@@ -6,9 +6,7 @@
 .aui-card-footer {
   background: #fff;
   position: relative;
-  min-height: 2.5rem;
   font-size: 14px;
-  color: #212121;
   word-break: break-all;
 }
 

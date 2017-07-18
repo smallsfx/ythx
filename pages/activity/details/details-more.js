@@ -1,5 +1,5 @@
 // details-more.js
-var active = require('../../../function/active.js');
+var active = require('../../../lib/core/active');
 
 import WxParse from '../../../lib/wxParse/wxParse';
 

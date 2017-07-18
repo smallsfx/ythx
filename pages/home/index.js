@@ -1,6 +1,6 @@
 // index.js
 var appInstance = getApp();
-var active = require('../../../function/active.js');
+var active = require('../../lib/core/active');
 
 Page({
 
@@ -9,14 +9,6 @@ Page({
    */
 
   data: {
-    /** swiper 相关属性 */
-
-    indicatorDots: false,
-    autoplay: true,
-    interval: 5000,
-    duration: 1000,
-    indicatorDots: true,
-
     /** 页面数据 */
     types: [],
     news: [],
@@ -32,10 +24,8 @@ Page({
   },
 
   onTypeTap: (e) => {
-    wx.setStorageSync('FIND-TYPE', e.target.dataset.type);
-    wx.switchTab({
-      url: '../../find/index'
-    });
+    wx.setStorageSync('FIND-TYPE', e.currentTarget.dataset.type);
+    wx.switchTab({ url: '../find/index' });
   },
 
   /**

@@ -87,7 +87,7 @@
 }
 
 /*角标*/
-.aui-badge {
+/*.aui-badge {
 	display: inline-block;
 	width: auto;
 	text-align: center;
@@ -103,7 +103,7 @@
     top: 0.2rem;
     left: 60%;
     z-index: 99;
-}
+}*/
 .aui-dot {
 	display: inline-block;
     width: 0.4rem;
