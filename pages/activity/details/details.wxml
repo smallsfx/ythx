@@ -1,27 +1,22 @@
 <import src="/templates/evaluate.wxml" />
 <scroll-view scroll-y scroll-with-animation enable-back-to-top style="height:{{scrollHeight}}px">
 
-  <view class="aui-card-content">
-    <image class='img-news' src="{{item.img}}" />
-  </view>
+  <image class='img-news' src="{{item.img}}" />
 
   <view class="aui-card-content-padded aui-border-b">
-    <view class="aui-row aui-row-padded">
-      <view class="aui-col-12 text-header">{{item.title}}</view>
+
+    <view class="aui-card-line">
+      <text class="text-header">{{item.title}}</text>
     </view>
-    <view class="aui-row aui-row-padded">
-      <view class="aui-col-8">
+    <view class="aui-card-line">
+      <view class="flex">
         <block wx:for-items="{{item.tags}}" wx:key="{{tag.id}}" wx:for-item="tag">
           <text class="aui-col-3 tag-item">{{tag.text}}</text>
         </block>
       </view>
-      <view class="aui-col-4">
-        <view class="aui-col-12 aui-text-right">
-          <text class="text-addr">¥ {{item.signup.money}}</text>
-        </view>
-        <view class="aui-col-12 aui-text-right">
-          <text class="text-addr">{{item.signup.pay}} 人已付款</text>
-        </view>
+      <view class="text-tip">
+        <view class="text-money">¥ {{item.signup.money}}</view>
+        <view class="text-addr">{{item.signup.pay}} 人已付款</view>
       </view>
     </view>
   </view>
@@ -30,7 +25,6 @@
   <navigator url="/pages/map/map?lng={{item.addr.lng}}&lat={{item.addr.lat}}&name={{item.addr.name}}" class="aui-card-header aui-card-arrow aui-border-b aui-border-t">
     <text class="text-addr"> {{item.addr.desc}} </text>
     <text class="text-msg-right">{{item.addr.distance}}</text>
-
   </navigator>
   <!--报名人数-->
   <navigator url="../sign-up-list/sign-up-list?id={{item.id}}" class="aui-card-content-padded aui-card-arrow">

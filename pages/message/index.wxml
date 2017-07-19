@@ -4,13 +4,13 @@
   <view class="aui-tab-item {{tab==1 ? 'aui-active' : ''}}" data-tab="1" bindtap="swichNav">通讯录</view>
 </view>
 
-<swiper current="{{tab}}" class="aui-tab-box" duration="300" style="height:{{winHeight - 43}}px" bindchange="bindChange">
+<swiper current="{{tab}}" class="aui-tab-box" duration="300" style="height:{{winHeight - 47}}px" bindchange="bindChange">
   <!-- 消息界面 -->
   <swiper-item>
-    <template is="msg-text" data="{{winHeight: winHeight,messages:messages}}"></template>
+    <template is="msg-text" data="{{height: winHeight - 47,messages:messages}}"></template>
   </swiper-item>
   <!-- 通讯录界面 -->
   <swiper-item>
-    <template is="msg-contacts" data="{{winHeight: winHeight,contacts:contacts}}"></template>
+    <template is="msg-contacts" data="{{height: winHeight - 47,contacts:contacts}}"></template>
   </swiper-item>
 </swiper>

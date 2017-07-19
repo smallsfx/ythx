@@ -4,19 +4,19 @@
 </view>
 
 <!--帮助与反馈-->
-<navigator url="../options/index">
+<navigator url="../help/index">
   <view class="aui-card-header aui-card-arrow aui-border-t">
     <text>帮助与反馈</text>
   </view>
 </navigator>
 <!--关于悦通慧享-->
-<navigator url="../options/index">
+<navigator url="../about-app/index">
   <view class="aui-card-content-padded aui-card-arrow aui-border-t">
     <text>关于悦通慧享</text>
   </view>
 </navigator>
 <!--关于汇通国力-->
-<navigator url="../options/index">
+<navigator url="../about-company/index">
   <view class="aui-card-content-padded aui-card-arrow aui-border-t aui-border-b">
     <text>关于汇通国力</text>
   </view>

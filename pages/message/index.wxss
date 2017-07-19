@@ -111,3 +111,8 @@ scroll-view {
   right: -0.2rem;
   z-index: 99;
 }
+
+/* .aui-tab-box{
+  height:calc(100vh- 47px);
+  height:-webkit-calc(100vh- 47px);
+} */

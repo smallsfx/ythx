@@ -1,0 +1,4 @@
+<import src="/templates/card-template.wxml" />
+<block wx:for-items="{{items}}" wx:key="{{item.id}}">
+  <template is="CARD-TRAINING" data="{{...item}}" />
+</block>

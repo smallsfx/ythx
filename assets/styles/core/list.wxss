@@ -7,29 +7,6 @@
   border-top: 1px solid #ddd;
 }
 
-.aui-list.aui-list-noborder, .aui-list.aui-list-noborder {
-  border-top: none;
-}
-
-.aui-list .aui-list-header {
-  background-color: #ddd;
-  color: #212121;
-  position: relative;
-  font-size: 14pt;
-  padding: 0.4rem 0.75rem;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
 .aui-list .aui-list-item {
   list-style: none;
   margin: 0;
@@ -47,10 +24,6 @@
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-}
-
-.aui-list.aui-list-noborder .aui-list-item:last-child {
-  border-bottom: 0;
 }
 
 .aui-list .aui-list-item-inner {

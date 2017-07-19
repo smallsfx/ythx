@@ -2,29 +2,30 @@
   "pages": [
     "pages/home/index",
     "pages/message/index",
+    "pages/message/talk",
     "pages/find/index",
-
     "pages/map/map",
     "pages/activity/details/details",
     "pages/activity/details/details-more",
     "pages/activity/sign-up-list/sign-up-list",
     "pages/activity/video-list/video-list",
     "pages/activity/lushu/lushu",
-
     "pages/school/details/details",
     "pages/school/details/details-more",
     "pages/school/sign-up-list/sign-up-list",
-
     "pages/training/details/details",
     "pages/training/details/details-more",
     "pages/training/details/evaluate-new",
     "pages/training/course-list/course-list",
     "pages/training/sign-up-list/sign-up-list",
-
-    "pages/message/talk",
-    
     "pages/personal/index/index",
-    "pages/personal/options/index"
+    "pages/personal/options/index",
+    "pages/personal/mytraining/index",
+    "pages/personal/myschool/index",
+    "pages/personal/mycollection/index",
+    "pages/personal/myfootmark/index",
+    "pages/personal/about-app/index",
+    "pages/personal/mybaby/index"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -37,7 +38,8 @@
     "selectedColor": "#FF8A57",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/index",
         "iconPath": "assets/images/icon-home-l.png",
         "selectedIconPath": "assets/images/icon_home-hl.png",

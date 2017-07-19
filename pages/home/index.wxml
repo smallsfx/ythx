@@ -25,7 +25,6 @@
   猜你喜欢
 </view>
 <!--页面主体-->
-
 <block wx:for-items="{{news}}" wx:for-index="idx" wx:key="{{item.id}}">
   <template wx:if="{{item.type == 'ACTIVITY'}}" is="CARD-ACTIVITY" data="{{...item}}" />
   <template wx:elif="{{item.type == 'TRAINING'}}" is="CARD-TRAINING" data="{{...item}}" />

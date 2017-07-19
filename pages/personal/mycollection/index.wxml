@@ -1,0 +1,25 @@
+<view class="aui-tab">
+  <view class="aui-tab-item {{tab==0 ? 'aui-active' : ''}}" data-tab="0" bindtap="swichNav">路书</view>
+  <view class="aui-tab-item {{tab==1 ? 'aui-active' : ''}}" data-tab="1" bindtap="swichNav">活动</view>
+  <view class="aui-tab-item {{tab==2 ? 'aui-active' : ''}}" data-tab="2" bindtap="swichNav">机构</view>
+  <view class="aui-tab-item {{tab==3 ? 'aui-active' : ''}}" data-tab="3" bindtap="swichNav">学校</view>
+</view>
+
+<swiper current="{{tab}}" class="aui-tab-box" duration="300" style="height:{{winHeight - 47}}px" bindchange="bindChange">
+  <!-- 收藏的路书列表 -->
+  <swiper-item>
+    <view>收藏的路书列表</view>
+  </swiper-item>
+  <!-- 收藏的活动列表 -->
+  <swiper-item>
+    <view>收藏的活动列表</view>
+  </swiper-item>
+  <!-- 收藏的机构列表 -->
+  <swiper-item>
+    <view>收藏的机构列表</view>
+  </swiper-item>
+  <!-- 收藏的学校列表 -->
+  <swiper-item>
+    <view>收藏的学校列表</view>
+  </swiper-item>
+</swiper>

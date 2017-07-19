@@ -1,6 +1,6 @@
 <!-- 消息界面 -->
 <template name="msg-text">
-  <scroll-view scroll-y scroll-with-animation style="height:{{winHeight-43}}px;" lower-threshold="50">
+  <scroll-view scroll-y scroll-with-animation style="height:{{height}}px;" lower-threshold="50">
     <ul class="aui-msglist-list">
       <block wx:for-items="{{messages}}" wx:key="{{message}}" wx:for-item="message">
         <navigator url="{{(message.contacts)?'/pages/message/talk':''}}">
@@ -48,7 +48,7 @@
       </view>
     </block>
   </view>
-  <scroll-view scroll-y scroll-with-animation style="height:{{winHeight-43}}px;" lower-threshold="50">
+  <scroll-view scroll-y scroll-with-animation style="height:{{height}}px;" lower-threshold="50">
     <ul class="aui-list aui-media-list">
       <block wx:for-items="{{contacts.list}}" wx:key="{{contact.id}}" wx:for-item="contact">
         <li class="aui-list-item aui-list-item-middle">
