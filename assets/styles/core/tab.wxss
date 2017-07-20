@@ -56,11 +56,11 @@
 /*MENU 菜单项样式*/
 
 .aui-menu-item {
-  font-size: 30rpx;
+  font-size: 25rpx;
   display: inline-block;
-  width: 25%;
+  width: 33.33%;
   color: #545454;
-  margin: 15rpx 0;
+  /* margin: 15rpx 0; */
 }
 
 .aui-menu-item+.aui-menu-item {
@@ -77,7 +77,6 @@
 
 .aui-menu-item.aui-active {
   color: #FF8A57;
-  border-bottom: 5rpx solid #FF8A57;
 }
 
 
@@ -93,9 +92,10 @@
   z-index: 1000;
   display: none;
   overflow: hidden;
-  padding: 15rpx;
-  border: 1rpx solid #ccc;
-  margin: 5rpx;
+  /* padding: 15rpx; */
+  border-bottom: 1rpx solid #ccc;
+  border-top: 1rpx solid #ccc;
+  /* margin: 5rpx; */
   /* margin-top: 0; */
   /* border-top: none; */
 }
@@ -105,17 +105,13 @@
 }
 
 .aui-menu-content>view {
-  width: 45%;
+  width: 100%;
+  font-size: 25rpx;
   display: inline-block;
-  border: solid 1rpx #ccc;
-  margin: 5rpx;
-  border-radius: 15rpx;
-  line-height: 80rpx;
-}
-
-.aui-menu-content>view.aui-active {
-  background-color: #FF8A57;
-  color: #fff;
+  border-bottom: solid 1rpx #ccc;
+  /* margin: 5rpx; */
+  /* border-radius: 5px; */
+  line-height: 60rpx;
 }
 
 .aui-menu-content>view.aui-active {

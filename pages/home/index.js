@@ -2,6 +2,14 @@
 var appInstance = getApp();
 var active = require('../../lib/core/active');
 
+// wx.request({
+//   url: 'http://localhost:3000/api/environment/',
+//   method: 'GET',
+//   success: function (res) {
+//     console.log(res);
+//   }
+// })
+
 Page({
 
   /**

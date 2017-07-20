@@ -43,7 +43,7 @@ text {
 }
 
 .text-header {
-  font-size: 40rpx;
+  font-size: 20px;
 }
 
 .text-title {
@@ -74,4 +74,21 @@ text {
 
 .textarea-placeholder {
   color: #ccc;
+}
+
+.flex {
+  flex: 1
+}
+
+.text-tip {
+  font-size: 25rpx;
+  color: #aaa;
+  margin-left: 10rpx;
+  text-align: right;
+}
+
+.text-money {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #FF8A57;
 }

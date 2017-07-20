@@ -11,6 +11,6 @@
   </swiper-item>
   <!-- 通讯录界面 -->
   <swiper-item>
-    <template is="msg-contacts" data="{{height: winHeight - 47,contacts:contacts}}"></template>
+    <template is="msg-contacts" data="{{height: winHeight - 47,groups:groups,toView:toView,searchtext:searchtext,showsearchbutton:showsearchbutton}}"></template>
   </swiper-item>
 </swiper>

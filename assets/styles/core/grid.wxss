@@ -15,14 +15,7 @@
 .aui-grid [class*=aui-col-]:active {
 	background-color: #f5f5f5;
 }
-.aui-grid .aui-iconfont {
-	position: relative;
-    z-index: 20;
-    top: 0;
-    height: 1.4rem;
-    font-size: 1.4rem;
-    line-height: 1.4rem;
-}
+
 .aui-grid .aui-grid-label {
 	display: block;
     font-size: 0.7rem;

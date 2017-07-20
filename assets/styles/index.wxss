@@ -6,13 +6,13 @@
  */
 
 @import "core/base.wxss";
+@import "core/form.wxss";
 @import "core/bar.wxss";
 @import "core/button.wxss";
 @import "core/card.wxss";
 @import "core/chat.wxss";
 @import "core/dialog.wxss";
 @import "core/ellipsis.wxss";
-@import "core/form.wxss";
 @import "core/grid.wxss";
 @import "core/label-badge.wxss";
 @import "core/layout.wxss";

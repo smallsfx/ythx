@@ -27,12 +27,11 @@
     </scroll-view>
   </swiper-item>
   <!-- 活动页面 -->
-
   <block wx:for-items="{{menus}}" wx:key="{{menuItem}}" wx:for-item="menuItem">
     <swiper-item>
       <view class="aui-menu">
         <block wx:for-items="{{menuchildren}}" wx:key="{{menuChildItem}}" wx:for-item="menuChildItem">
-          <view class="aui-menu-item" data-menu="{{menuChildItem}}" bindtap="switchMenu">
+          <view class="aui-menu-item {{menu==menuChildItem ? 'aui-active' : ''}}" data-menu="{{menuChildItem}}" bindtap="switchMenu">
             {{filters[menuItem][menuChildItem].text}}
           </view>
         </block>

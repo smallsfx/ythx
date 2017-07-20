@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/home/index",
-    "pages/message/index",
-    "pages/message/talk",
     "pages/find/index",
+    "pages/message/talk",
+    "pages/message/index",
     "pages/map/map",
     "pages/activity/details/details",
     "pages/activity/details/details-more",

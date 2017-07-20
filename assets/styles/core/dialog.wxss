@@ -39,11 +39,7 @@
 	margin-top: -4rem;
 	display: none;
 }
-.aui-toast .aui-iconfont {
-	margin-top: 0.2rem;
-	display: block;
-	font-size: 2.6rem;
-}
+
 .aui-toast-content {
   margin: 0 0 0.75rem;
 }

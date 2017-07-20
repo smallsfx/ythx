@@ -1,16 +1,22 @@
 <!-- 消息界面 -->
 <template name="msg-text">
   <scroll-view scroll-y scroll-with-animation style="height:{{height}}px;" lower-threshold="50">
-    <ul class="aui-msglist-list">
+    <ul class="aui-list aui-media-list">
       <block wx:for-items="{{messages}}" wx:key="{{message}}" wx:for-item="message">
-        <navigator url="{{(message.contacts)?'/pages/message/talk':''}}">
-          <li class="aui-msglist-list-item">
-            <!-- 系统消息 -->
-            <block wx:if="{{ (message.contacts)== undefined }}">
-              <text>{{message.content[message.content.length-1]}}</text>
-            </block>
-             <block wx:else>
-              <view class="aui-avatar">
+        <!-- 系统消息 -->
+        <li wx:if="{{ (message.contacts)== undefined }}" class="aui-list-item aui-list-item-middle">
+          <view class="aui-media-list-item-inner">
+            <view class="aui-list-item-inner">
+              <view class="aui-list-item-text aui-list-item-title">
+                <text>{{message.content[message.content.length-1]}}</text>
+              </view>
+            </view>
+          </view>
+        </li>
+        <navigator wx:else url="{{(message.contacts)?'/pages/message/talk?index='+index:''}}">
+          <li class="aui-list-item aui-list-item-middle">
+            <view class="aui-media-list-item-inner">
+              <view class="aui-list-item-media wechat-avatar">
                 <view class="aui-badge">{{message.contents.length}}</view>
                 <image wx:if="{{message.contacts.length == 1}}" src="{{message.contacts[0].img}}" />
                 <view wx:else class="aui-avatar-group">
@@ -20,19 +26,20 @@
                   <image src="{{message.contacts[3].img}}" />
                 </view>
               </view>
-
-              <view class="aui-content">
-                <view wx:if="{{message.contacts.length == 1}}" class="aui-content-title">{{message.contents[message.contents.length-1].contact.name}}</view>
-                <view wx:else class="aui-content-title">{{message.group.name}}</view>
-                <view class="aui-content-text">
+              <view class="aui-list-item-inner">
+                <view class="aui-list-item-text">
+                  <view class="aui-list-item-title">
+                    <block wx:if="{{message.contacts.length == 1}}">{{message.contents[message.contents.length-1].contact.name}}</block>
+                    <block wx:else>{{message.group.name}}</block>
+                  </view>
+                </view>
+                <view class="aui-list-item-text aui-font-size-12">
                   <block wx:if="{{message.contents[message.contents.length-1].img}}">[图片]</block>
                   <block wx:else>{{message.contents[message.contents.length-1].content}}</block>
                 </view>
               </view>
               <view class="aui-content-right">{{message.contents[message.contents.length-1].date}}</view>
-
-            </block> 
-
+            </view>
           </li>
         </navigator>
       </block>
@@ -41,36 +48,90 @@
 </template>
 <!-- 通讯录界面 -->
 <template name="msg-contacts">
-  <view class="aui-charset-lilt">
-    <block wx:for-items="{{contacts.charset}}" wx:key="{{chartset}}" wx:for-item="chartset">
-      <view>
-        <text>{{chartset}}</text>
+  <scroll-view scroll-y scroll-with-animation scroll-into-view="{{toView}}" style="height:{{height}}px;" lower-threshold="50">
+    <view class="search-flex">
+      <view class="search-bar">
+        <input type="text" maxlength="12" value="{{searchtext}}" placeholder="请输入关键字查询" bindinput="inputSearch"></input>
+        <button class="search-btn {{showsearchbutton?'':'hide'}}" bindtap="submitSearch">清除</button>
       </view>
-    </block>
-  </view>
-  <scroll-view scroll-y scroll-with-animation style="height:{{height}}px;" lower-threshold="50">
+    </view>
     <ul class="aui-list aui-media-list">
-      <block wx:for-items="{{contacts.list}}" wx:key="{{contact.id}}" wx:for-item="contact">
-        <li class="aui-list-item aui-list-item-middle">
-          <navigator url="/pages/message/talk">
-            <view class="aui-media-list-item-inner">
-              <view class="aui-list-item-media wechat-avatar">
-                <image src="{{contact.img}}" />
-              </view>
-              <view class="aui-list-item-inner">
-                <view class="aui-list-item-text">
-                  <view class="aui-list-item-title">
-                    {{contact.name}}
-                  </view>
-                </view>
-                <view class="aui-list-item-text aui-font-size-12">
-                  {{contact.desc}}
-                </view>
+      <!-- 新的朋友 -->
+      <li class="aui-list-item aui-list-item-middle">
+        <navigator url="/pages/message/talk">
+          <view class="aui-media-list-item-inner">
+            <view class="aui-list-item-media wechat-avatar">
+              <image src="/assets/images/msg-new.png" />
+            </view>
+            <view class="aui-list-item-inner">
+              <view class="aui-list-item-text aui-list-item-title">新的朋友</view>
+              <view class="aui-list-item-text aui-font-size-12">
+                查找 & 添加 新朋友.
               </view>
             </view>
-          </navigator>
-        </li>
+          </view>
+        </navigator>
+      </li>
+      <!-- 群聊 -->
+      <li class="aui-list-item aui-list-item-middle">
+        <navigator url="/pages/message/talk">
+          <view class="aui-media-list-item-inner">
+            <view class="aui-list-item-media wechat-avatar">
+              <image src="/assets/images/msg-group.png" />
+            </view>
+            <view class="aui-list-item-inner">
+              <view class="aui-list-item-text aui-list-item-title">群聊</view>
+              <view class="aui-list-item-text aui-font-size-12">
+                已经加入的群组
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </li>
+      <!-- 群聊 -->
+      <li class="aui-list-item aui-list-item-middle">
+        <navigator url="/pages/message/talk">
+          <view class="aui-media-list-item-inner">
+            <view class="aui-list-item-media wechat-avatar">
+              <image src="/assets/images/msg-school.png" />
+            </view>
+            <view class="aui-list-item-inner">
+              <view class="aui-list-item-text aui-list-item-title">学校 & 机构</view>
+              <view class="aui-list-item-text aui-font-size-12">
+                已经加入的学校、机构
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </li>
+
+      <block wx:for-items="{{groups}}" wx:key="{{group.id}}" wx:for-item="group">
+        <view wx:if="{{group.display}}" class="aui-list-line" id="{{group.charset}}">{{group.code}}</view>
+        <block wx:for-items="{{group.data}}" wx:key="{{contact.id}}" wx:for-item="contact">
+          <li wx:if="{{contact.display}}" class="aui-list-item aui-list-item-middle">
+            <navigator url="/pages/message/talk">
+              <view class="aui-media-list-item-inner">
+                <view class="aui-list-item-media wechat-avatar">
+                  <image src="{{contact.img}}" />
+                </view>
+                <view class="aui-list-item-inner">
+                  <view class="aui-list-item-text aui-list-item-title">
+                    {{contact.name}}
+                  </view>
+                  <view class="aui-list-item-text aui-font-size-12">
+                    {{contact.desc}}
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </li>
+        </block>
       </block>
     </ul>
   </scroll-view>
+  <view class="aui-charset-lilt">
+    <block wx:for-items="{{groups}}" wx:key="{{group}}" wx:for-item="group">
+      <view wx:if="{{group.display}}" bindtap="onCharset" data-charset="{{group.charset}}">{{group.id}}</view>
+    </block>
+  </view>
 </template>

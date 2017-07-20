@@ -78,9 +78,6 @@
 	color: #e51c23;
 	border-color: #e51c23;
 }
-.aui-label .aui-iconfont {
-	font-size: 0.6rem;
-}
 
 .aui-swiper-image{
   width:100%;

@@ -43,72 +43,7 @@
  li {
  	list-style: none;
  }
- /*文字、背景颜色*/
 
- h1,
- h2,
- h3,
- h4,
- h5,
- h6 {
- 	font-weight: 400;
- }
-
- h1 {
- 	font-size: 1.2rem;
- }
-
- h2 {
- 	font-size: 1rem;
- }
-
- h3 {
- 	font-size: 0.8rem;
- }
-
- h4 {
- 	font-size: 0.7rem;
- }
-
- h5 {
- 	font-size: 0.7rem;
- 	font-weight: normal;
- 	color: #757575;
- }
-
- h6 {
- 	font-size: 0.7rem;
- 	font-weight: normal;
- 	color: #757575;
- }
-
- h1 small,
- h2 small,
- h3 small,
- h4 small {
- 	font-weight: normal;
- 	line-height: 1;
- 	color: #757575;
- }
-
- h5 small,
- h6 small {
- 	font-weight: normal;
- 	line-height: 1;
- 	color: #757575;
- }
-
- h1 small,
- h2 small,
- h3 small {
- 	font-size: 65%;
- }
-
- h4 small,
- h5 small,
- h6 small {
- 	font-size: 75%;
- }
  /*基础动画类*/
 
  @keyframes rotate {

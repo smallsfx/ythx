@@ -1,58 +1,26 @@
 <view class="aui-chat">
-  <view class="aui-chat-header">2016年7月13日</view>
-  <view class="aui-chat-item aui-chat-left">
-    <view class="aui-chat-media">
-      <image src="/assets/head-icon/avatar5.jpg" />
-    </view>
-    <view class="aui-chat-inner">
-      <view class="aui-chat-name">AUI <span class="aui-label aui-label-warning">2.0</span></view>
-      <view class="aui-chat-content">
-        <view class="aui-chat-arrow"></view>
-        Hello AUI 2.0!
+  <block wx:for-items="{{message.contents}}" wx:key="{{content}}" wx:for-item="content">
+    <!-- 处理日期 -->
+    <view wx:if="{{content.date}}" class="aui-chat-header">{{content.date}}</view>
+    <!-- 处理聊天对象 -->
+    <view class="aui-chat-item {{content.self?'aui-chat-right':'aui-chat-left'}} ">
+      <view class="aui-chat-media">
+        <image src="{{content.contact.img}}" />
       </view>
-      <view class="aui-chat-status aui-chat-status-refresh">
-        <i class="aui-iconfont aui-icon-correct aui-text-success"></i>
-      </view>
-    </view>
-  </view>
-  <view class="aui-chat-item aui-chat-right">
-    <view class="aui-chat-media">
-      <image src="/assets/head-icon/avatar2.jpg" />
-    </view>
-    <view class="aui-chat-inner">
-      <view class="aui-chat-name">流浪男</view>
-      <view class="aui-chat-content">
-        <view class="aui-chat-arrow"></view>
-        你好！
-      </view>
-      <view class="aui-chat-status">
-        <i class="aui-iconfont aui-icon-info aui-text-danger"></i>
+      <view class="aui-chat-inner">
+        <view class="aui-chat-name">
+          {{content.contact.name}}
+          <span wx:if="{{content.contact.identity}}" class="aui-label aui-label-warning">
+            {{content.contact.identity.name}}
+          </span>
+        </view>
+        <view class="aui-chat-content">
+          <view class="aui-chat-arrow"></view>
+          <image wx:if="{{content.img}}" src="{{content.img}}" data-src="{{content.img}}" bindtap="onPreview" />
+          <text wx:else>{{content.content}}</text>
+        </view>
       </view>
     </view>
-  </view>
-  <view class="aui-chat-item aui-chat-left">
-    <view class="aui-chat-media">
-      <image src="/assets/head-icon/avatar5.jpg" />
-    </view>
-    <view class="aui-chat-inner">
-      <view class="aui-chat-name">AUI <span class="aui-label aui-label-warning">2.0</span></view>
-      <view class="aui-chat-content">
-        <view class="aui-chat-arrow"></view>
-        <image src="/assets/news/7.jpg" />
-      </view>
-    </view>
-  </view>
-  <view class="aui-chat-item aui-chat-right">
-    <view class="aui-chat-media">
-      <image src="/assets/head-icon/avatar2.jpg" />
-    </view>
-    <view class="aui-chat-inner">
-      <view class="aui-chat-name">流浪男</view>
-      <view class="aui-chat-content">
-        <view class="aui-chat-arrow"></view>
-        以前拍摄的牛背山星空
-      </view>
-    </view>
-  </view>
 
+  </block>
 </view>

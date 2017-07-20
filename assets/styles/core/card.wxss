@@ -25,12 +25,12 @@
   padding: 15rpx;
 }
 
-.aui-card-header, .aui-card-footer,.aui-card-content-padded {
+.aui-card-header, .aui-card-footer, .aui-card-content-padded {
   padding: 12px 15px;
 }
 
 .aui-card-footer {
-  font-size:12px;
+  font-size: 12px;
   color: #757575;
   margin-bottom: 20px;
 }
@@ -38,9 +38,11 @@
 .aui-card-header, .aui-card-footer {
   margin-top: 20px;
 }
+
 .aui-card-content.nopadded, .aui-card-content-padded.nopadded, .aui-card-header.nopadded {
   padding: 0 !important;
 }
+
 .aui-card-content.nobg, .aui-card-content-padded.nobg, .aui-card-header.nobg {
   background-color: transparent;
 }
@@ -78,22 +80,6 @@
   padding-top: 15rpx;
   margin: 0;
   min-height: 30rpx;
-  line-height: 40rpx;
+  line-height: 22px;
   display: flex;
-}
-
-.flex {
-  flex: 1
-}
-
-.text-tip {
-  font-size: 25rpx;
-  color: #aaa;
-  margin-left: 10rpx;
-  text-align: right;
-}
-.text-money{
-  font-size: 40rpx;
-  font-weight: bold;
-  color: #FF8A57;
 }
