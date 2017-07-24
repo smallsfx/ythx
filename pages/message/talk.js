@@ -1,5 +1,5 @@
-var contacts = require('../../lib/data/contacts');
-var messages = require('../../lib/data/messages');
+var contacts = require('../../lib/data/attr-contacts');
+var messages = require('../../lib/data/attr-messages');
 Page({
 
   /**

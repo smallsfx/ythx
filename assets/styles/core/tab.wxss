@@ -19,6 +19,7 @@
   display: inline-block;
   width: 25%;
   color: #545454;
+  font-weight: bold;
 }
 
 
@@ -26,7 +27,7 @@
 
 .aui-tab-item.aui-active {
   color: #FF8A57;
-  border-bottom: 5rpx solid #FF8A57;
+  /* border-bottom: 5rpx solid #FF8A57; */
 }
 
 

@@ -13,13 +13,103 @@
 @import "core/chat.wxss";
 @import "core/dialog.wxss";
 @import "core/ellipsis.wxss";
-@import "core/grid.wxss";
 @import "core/label-badge.wxss";
 @import "core/layout.wxss";
 @import "core/list.wxss";
 @import "core/margin-padding.wxss";
 @import "core/tab.wxss";
-@import "core/text.wxss";
+
+/*文字对齐*/
+
+.aui-text-left {
+  text-align: left !important;
+}
+
+.aui-text-center {
+  text-align: center !important;
+}
+
+.aui-text-justify {
+  text-align: justify !important;
+}
+
+.aui-text-right {
+  text-align: right !important;
+}
+
+.aui-text-tip {
+  text-align: right !important;
+  font-size: 11px;
+  color: #888;
+}
+
+.aui-text-msg {
+  font-size: 11px;
+  color: #888;
+  padding-top: 15px;
+  padding-bottom: 8px;
+}
+
+.text-msg-right {
+  position: absolute;
+  right: 30px;
+  color: #ccc;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+text {
+  font-size: 30rpx;
+  color: #545454;
+}
+
+.text-header {
+  font-size: 20px;
+}
+
+.text-title {
+  font-size: 40rpx;
+}
+
+.text-title::before {
+  content: '';
+  display: inline-block;
+  vertical-align: -6rpx;
+  width: 6rpx;
+  height: 40rpx;
+  background: #FF8A57;
+  margin-right: 8rpx;
+}
+
+.text-addr {
+  color: #999;
+}
+
+.text-desc {
+  color: #999;
+}
+
+.textarea-placeholder {
+  color: #ccc;
+}
+
+.flex {
+  flex: 1
+}
+
+.text-tip {
+  font-size: 25rpx;
+  color: #aaa;
+  margin-left: 10rpx;
+  text-align: right;
+}
+
+.text-money {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #FF8A57;
+}
+
 .text-color-primary {
   color: #FF8A57;
 }
@@ -39,6 +129,9 @@
 .text-color-white {
   color: white;
 }
+
+
+/* 标签 */
 
 .tag-container {
   font-size: 12px;
@@ -75,6 +168,11 @@
   border-radius: 10px;
 }
 
+.evaluate-img {
+  height: 80px;
+  border-radius: 15px;
+}
+
 .img-start {
   width: 20px;
   height: 20px;
@@ -93,4 +191,25 @@ contact-button {
 .img-icon {
   width: 60rpx;
   height: 60rpx;
+}
+
+.center-line {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding-top: 15px;
+  padding-bottom:5px;
+}
+
+.center-line text {
+  color: #ccc;
+  font-size: 20rpx;
+  margin: 0 10px;
+}
+
+.center-line view {
+  flex: 1;
+  height: 1px;
+  background-color: #eee;
+  /* margin: 0 10px; */
 }

@@ -46,8 +46,3 @@ button,
 .aui-btn-block .aui-badge {
   margin-left: 0.3rem;
 }
-
-button.aui-active {
-  background-color: #FF8A57;
-  color: #ffffff;
-}

@@ -1,0 +1,7 @@
+<template name="center-line">
+  <view class="center-line">
+    <view />
+    <text> {{text}} </text>
+    <view />
+  </view>
+</template>

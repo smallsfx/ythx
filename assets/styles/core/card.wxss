@@ -28,6 +28,10 @@
 .aui-card-header, .aui-card-footer, .aui-card-content-padded {
   padding: 12px 15px;
 }
+.aui-card-header image+text, .aui-card-footer image+text, .aui-card-content-padded image+text{
+  padding-left:15px;
+  flex: 1;
+}
 
 .aui-card-footer {
   font-size: 12px;

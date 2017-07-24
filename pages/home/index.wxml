@@ -1,4 +1,5 @@
 <import src="/templates/card-template.wxml" />
+<import src="/templates/center-line-template.wxml" />
 
 <!-- swiper -->
 <swiper autoplay indicator-dots style="height:200px" interval="5000" duration="1000">
@@ -16,10 +17,12 @@
   </view>
 </view>
 
-<view class="aui-text-msg aui-text-center aui-border-b">- 猜你喜欢 -</view>
+<template is="center-line" data="{{text:'猜你喜欢'}}" />
 <!--页面主体-->
 <block wx:for-items="{{news}}" wx:for-index="idx" wx:key="{{item.id}}">
   <template wx:if="{{item.type == 'ACTIVITY'}}" is="CARD-ACTIVITY" data="{{...item}}" />
   <template wx:elif="{{item.type == 'TRAINING'}}" is="CARD-TRAINING" data="{{...item}}" />
   <template wx:elif="{{item.type == 'SCHOOL'}}" is="CARD-SCHOOL" data="{{...item}}" />
 </block>
+
+<template is="center-line" data="{{text:'我就是底线'}}" />

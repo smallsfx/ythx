@@ -5,9 +5,3 @@
 scroll-view {
   background-color: #fff;
 }
-
-
-/* .aui-tab-box{
-  height:calc(100vh- 47px);
-  height:-webkit-calc(100vh- 47px);
-} */

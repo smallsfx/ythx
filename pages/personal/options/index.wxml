@@ -1,23 +1,26 @@
 <!--设置-->
 <view bindtap="onSetting" class="aui-card-header aui-card-arrow aui-border-b aui-border-t">
-<text>小程序权限</text>
+  <text>小程序权限</text>
 </view>
 
 <!--帮助与反馈-->
 <navigator url="../help/index">
   <view class="aui-card-header aui-card-arrow aui-border-t">
+    <image class="img-icon" src="/assets/images/icon-feedback.png" />
     <text>帮助与反馈</text>
   </view>
 </navigator>
 <!--关于悦通慧享-->
 <navigator url="../about-app/index">
   <view class="aui-card-content-padded aui-card-arrow aui-border-t">
+    <image class="img-icon" src="/assets/images/icon-info.png" />
     <text>关于悦通慧享</text>
   </view>
 </navigator>
 <!--关于汇通国力-->
 <navigator url="../about-company/index">
   <view class="aui-card-content-padded aui-card-arrow aui-border-t aui-border-b">
+    <image class="img-icon" src="/assets/images/icon-info.png" />
     <text>关于汇通国力</text>
   </view>
 </navigator>

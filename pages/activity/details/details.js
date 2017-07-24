@@ -1,14 +1,12 @@
 // details.js
 var active = require('../../../lib/core/active');
 const tabbar_height = 50;
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    text: '',
     item: undefined,
     scrollWidth: '100%',
     scrollHeight: 0,
@@ -25,7 +23,6 @@ Page({
     var item = active.find(options.id, active.TYPE.ACTIVITY);
 
     this.setData({
-      text: JSON.stringify(item),
       item: item,
       scrollWidth: (80 * item.signup.list.length) + "px",
       scrollHeight: sysinfo.windowHeight - tabbar_height
@@ -45,7 +42,7 @@ Page({
     // wx.navigateTo({
     //   url: './details-more?t=2&id=' + e.target.dataset.id
     // })
-    
+
   },
 
   onSingup: () => {

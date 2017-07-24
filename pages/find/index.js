@@ -1,9 +1,10 @@
 var active = require('../../lib/core/active');
 var filterConst = require('../../lib/data/filter');
-var sysinfo = undefined;
+var sysinfo = wx.getSystemInfoSync();
 const tabbar_height = 43;
 const menubar_height = 31;
-const search_height = 57;
+const search_height = 50;
+
 let filters = {
   ACTIVITY: {
     location: filterConst.ACTIVITY.location[0],
@@ -80,11 +81,12 @@ Page({
     showsearchbar: true,
     showsearchbutton: false, //显示搜索按钮
     searchtext: '', //搜索文字
-    tab: 0,
-    tabHeight: 0,
+    tab: "ALL",
+    tabindex: 0,
+    tabHeight: sysinfo.windowHeight - tabbar_height - search_height,
+    scrollHeight: sysinfo.windowHeight - tabbar_height - menubar_height,
     filters: filters,
     filterConst: filterConst,
-    screenHeight: 0,
     scrolltop: null, //滚动位置
     menu: 0,
     menus: ['ACTIVITY', 'TRAINING', 'SCHOOL'],
@@ -92,32 +94,18 @@ Page({
   },
 
   onLoad: function (options) {
-    var that = this;
-    sysinfo = wx.getSystemInfoSync();
-
-    that.setData({
-      tabHeight: (sysinfo.windowHeight - search_height) + "px",
-      filters: filters,
-      scrollHeight: sysinfo.windowHeight - tabbar_height - menubar_height
-    });
-
-    console.log('window-height:%s,search-height:%s,tab-height', sysinfo.windowHeight, search_height, this.data.tabHeight);
-  },
-
-  onShow: function (options) {
     var find_key = wx.getStorageSync('FIND-TYPE');
     if (!find_key) {
-      find_key = 0;
+      find_key = this.data.tab;
     }
-
+    wx.removeStorageSync('FIND-TYPE');
     this.setData({
-      tabindex: getTabIndex(find_key),
       tab: find_key,
+      tabindex: getTabIndex(find_key),
       items: requestData(find_key),
-      scrollHeight: sysinfo.windowHeight - tabbar_height,
-      tabHeight: (sysinfo.windowHeight - search_height) + "px"
     });
   },
+
   /** 
    * 滑动切换tab 
    */
@@ -197,10 +185,9 @@ Page({
     that.setData({
       menu: 0,
       showsearchbar: (e.detail.scrollTop < 150),
-      tabHeight: th + "px",
+      tabHeight: th,
       scrollHeight: (this.data.tabindex == 0 ? th : th - menubar_height)
     });
-    console.log('window-height:%s,search-height:%s,tab-height', sysinfo.windowHeight, search_height, this.data.tabHeight);
   },
   /**
    * 输入搜索文字

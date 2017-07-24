@@ -1,10 +1,11 @@
 /*底部切换栏*/
 
 .aui-footbar {
-  height: 52px;
+  height: 52px !important;
   position: fixed;
-  top: auto;
   bottom: 0;
+  padding: 0;
+  margin: 0;
   table-layout: fixed;
   background-color: #eee;
 }
@@ -13,64 +14,43 @@
   display: table-cell;
   position: relative;
   width: 1%;
-  height: 52px;
+  height: 52px !important;
   text-align: center;
   vertical-align: middle;
   background-color: transparent;
   border-radius: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 25rpx;
+  vertical-align: middle;
+  color:#545454;
 }
 
-.aui-footbar-item::after {
-  border: none;
-}
-
-.aui-footbar.aui-active {
+.aui-footbar-item.aui-active {
   background-color: #FF8A57;
-}
-
-.aui-active>text {
   color: #ffffff;
 }
 
 .aui-footbar-item>image {
   width: 40px;
   height: 40px;
+  margin-right: 5rpx;
 }
-
-.aui-footbar-item>text {
-  font-size: 30rpx;
-  vertical-align: middle;
-}
-
-.aui-footbar .aui-badge {
-  position: absolute;
-  top: 0.1rem;
-  left: 55%;
-  z-index: 99;
-}
-
-.aui-footbar .aui-dot {
-  position: absolute;
-  top: 0.1rem;
-  right: 30%;
-  z-index: 99;
-}
-
 
 .search-flex {
   display: flex;
-  padding: 20rpx;
+  padding: 5px;
   border-bottom: 1rpx solid #ddd;
   position: relative;
   z-index: 13;
   background: #f9f9f9;
-  /* transform:  translateY(-100%); */
   margin-top: 0;
   transition: all 0.3s;
+  height: 50px;
 }
 
 .search-flex.tophide {
-  margin-top: -117rpx;
+  margin-top: -50px;
 }
 
 .search-btn {

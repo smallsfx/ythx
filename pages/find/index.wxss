@@ -1,3 +1,10 @@
 .aui-tab-item {
   width: 25%;
 }
+
+/* .search-flex{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+} */

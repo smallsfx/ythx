@@ -3,18 +3,51 @@ var active = require('../../../lib/core/active');
 
 import WxParse from '../../../lib/wxParse/wxParse';
 
-var sysinfo = undefined;
+let sysinfo = undefined;
+let evaluate = undefined;
+let activity = undefined;
 const tabbar_height = 45;
+
+var refresh_evaluate = (that) => {
+  evaluate = activity.evaluate;
+  delete activity['evaluate'];
+  that.setData({
+    item: {
+      data: activity,
+      scrollHeight: sysinfo.windowHeight - tabbar_height
+    },
+  });
+  setTimeout(function () {
+    activity.evaluate = evaluate;
+    that.setData({
+      item: {
+        data: activity,
+        scrollHeight: sysinfo.windowHeight - tabbar_height
+      },
+    });
+  }, 1000);
+};
+
+
+var refreshTab = (that, index) => {
+  switch (index) {
+    case '0':
+      break;
+    case '1':
+      refresh_evaluate(that);
+      break;
+    case '2':
+      break;
+  }
+};
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    /** 页面配置 */
-    winWidth: 0,
     winHeight: 0,
-    // tab切换  
     currentTab: 0,
 
     /** 数据相关 */
@@ -23,8 +56,6 @@ Page({
       screenHeight: 0
     }
   },
-
-
 
   /**
    * 生命周期函数--监听页面加载
@@ -38,11 +69,11 @@ Page({
     if (!options.t) {
       options.t = 1;
     }
-    var activity = active.find(options.id, active.TYPE.ACTIVITY);
-    WxParse.wxParse('insertData', 'html', activity.desc || '<div>没有详细描述</div>', that);
+    activity = active.find(options.id, active.TYPE.ACTIVITY);
+
+    WxParse.wxParse('insertData', 'html', activity.desc, that);
 
     that.setData({
-      winWidth: sysinfo.windowWidth,
       winHeight: sysinfo.windowHeight,
       item: {
         data: activity,
@@ -62,22 +93,22 @@ Page({
     that.setData({
       currentTab: e.detail.current
     });
-
+    refreshTab(e.detail.current);
   },
 
   /** 
    * 点击tab切换 
    */
   swichNav: function (e) {
-
     var that = this;
 
-    if (this.data.currentTab === e.target.dataset.current) {
-      return false;
+    if (this.data.currentTab == e.target.dataset.current) {
+
     } else {
       that.setData({
         currentTab: e.target.dataset.current
-      })
+      });
     }
+    refreshTab(that, e.target.dataset.current);
   }
 })

@@ -19,13 +19,16 @@
     "pages/training/course-list/course-list",
     "pages/training/sign-up-list/sign-up-list",
     "pages/personal/index/index",
-    "pages/personal/options/index",
-    "pages/personal/mytraining/index",
-    "pages/personal/myschool/index",
+    "pages/personal/about-app/index",
+    "pages/personal/about-company/index",
+    "pages/personal/help/index",
+    "pages/personal/mybaby/index",
     "pages/personal/mycollection/index",
     "pages/personal/myfootmark/index",
-    "pages/personal/about-app/index",
-    "pages/personal/mybaby/index"
+    "pages/personal/myschool/index",
+    "pages/personal/mytraining/index",
+    "pages/personal/options/index",
+    "pages/activity/details/evaluate-new"
   ],
   "window": {
     "navigationBarTextStyle": "white",

@@ -1,11 +1,11 @@
 <!-- 学校评论模版 -->
 <import src="evaluate.wxml" />
 <template name="details-school-evaluate">
-  <block wx:for="{{data.evaluates}}" wx:key="{{evaluate.id}}" wx:for-item='evaluate'>
+  <block wx:for="{{data.evaluate.list}}" wx:key="{{evaluate.id}}" wx:for-item='evaluate'>
     <view class="aui-card-content-padded aui-border-b">
       <view class="aui-row aui-row-padded">
         <view class="evaluate-left">
-          <image class='evaluate-head' src="{{evaluate.img}}" />
+          <image class='evaluate-head' src="{{evaluate.contact.img}}" />
           <view class="aui-row">
             <block wx:if="{{evaluate.thumbupOn}}">
               <image class='evaluate-head' src="/assets/images/thumb-up-hl.png" />
@@ -21,7 +21,7 @@
         <view class="evaluate-right">
           <view class="aui-row">
             <view class="aui-col-6">
-              <view class="evaluate-name">{{evaluate.name}}</view>
+              <view class="evaluate-name">{{evaluate.contact.name}}</view>
               <view class="evaluate-time">{{evaluate.time}}</view>
             </view>
             <view class="aui-col-6">
@@ -34,7 +34,7 @@
           <view class="aui-row">
             <block wx:if="{{evaluate.imgs != undefined && evaluate.imgs.length > 0}}">
               <block wx:for="{{evaluate.imgs}}" wx:key="{{image.id}}" wx:for-item='image'>
-                <image class='evaluate-head aui-col-4' src="{{image.img}}" />
+                <image class='evaluate-img aui-col-4' src="{{image.img}}" />
               </block>
             </block>
           </view>

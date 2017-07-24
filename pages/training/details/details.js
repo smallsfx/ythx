@@ -9,7 +9,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    text: '',
     item: undefined,
     scrollHeight: 0,
   },
@@ -25,7 +24,6 @@ Page({
     var item = active.find(options.id, active.TYPE.TRAINING);
 
     this.setData({
-      text: JSON.stringify(item),
       item: item,
       scrollHeight: sysinfo.windowHeight - tabbar_height
     });

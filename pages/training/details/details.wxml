@@ -13,9 +13,10 @@
     </view>
     <view class="aui-row aui-row-padded">
       <view class="aui-col-8">
-        <block wx:for-items="{{item.tags}}" wx:key="{{tag.id}}" wx:for-item="tag">
-          <text class="aui-col-3 tag-item">{{tag.text}}</text>
-        </block>
+        <view class="aui-col-3 tag-item" wx:for-items="{{item.tags}}" wx:key="{{tag}}" wx:for-item="tag">
+          <block wx:if="{{tag.text}}">{{tag.text}}</block>
+          <block wx:else>{{tag}}</block>
+        </view>
       </view>
       <!--<view class="aui-col-4">
         <view class="aui-col-12 aui-text-right">
@@ -35,7 +36,7 @@
   </navigator>
   <!--评论-->
   <navigator url="./details-more?id={{item.id}}" class="aui-card-content-padded  aui-card-arrow aui-border-b">
-    <template is="ctrl-evaluate" data="{{...item.evaluate}}" />
+    <template is="ctrl-evaluate" data="{{rate:item.evaluate.rate}}" />
     <text class="text-msg-right">{{item.evaluate.count}}人评论</text>
   </navigator>
   <!--查看课程安排 & 开班时间-->

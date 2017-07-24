@@ -7,31 +7,31 @@
 </view>
 <!--我的宝贝-->
 <navigator url="../mybaby/index" class="aui-card-header aui-card-arrow aui-border-b">
-  <image class="img-icon" src="/assets/images/location.png" />
+  <image class="img-icon" src="/assets/images/icon-baby.png" />
   <text class="flex">我的宝贝</text>
 </navigator>
 <!--我的收藏-->
 <navigator url="../mycollection/index" class="aui-card-header aui-card-arrow aui-border-b">
-  <image class="img-icon" src="/assets/images/location.png" />
+  <image class="img-icon" src="/assets/images/icon-star.png" />
   <text class="flex">我的收藏</text>
 </navigator>
 <!--我的足迹-->
 <navigator url="../myfootmark/index" class="aui-card-content-padded aui-card-arrow aui-border-b">
-  <image class="img-icon" src="/assets/images/location.png" />
+  <image class="img-icon" src="/assets/images/icon-footmark.png" />
   <text class="flex">我的足迹</text>
 </navigator>
 <!--我的机构-->
 <navigator url="../mytraining/index" class="aui-card-content-padded aui-card-arrow aui-border-b">
-  <image class="img-icon" src="/assets/images/location.png" />
+  <image class="img-icon" src="/assets/images/icon-school.png" />
   <text class="flex">我的机构</text>
 </navigator>
 <!--我的学校-->
 <navigator url="../myschool/index" class="aui-card-content-padded aui-card-arrow aui-border-b">
-  <image class="img-icon" src="/assets/images/location.png" />
+  <image class="img-icon" src="/assets/images/icon-school.png" />
   <text class="flex">我的学校</text>
 </navigator>
 <!--设置-->
 <navigator url="../options/index" class="aui-card-content-padded aui-card-arrow aui-border-b">
-  <image class="img-icon" src="/assets/images/location.png" />
+  <image class="img-icon" src="/assets/images/icon-option.png" />
   <text class="flex">设置</text>
 </navigator>

@@ -100,7 +100,3 @@ img.aui-img-round {
 .aui-col-1 {
 	width: 8.33333333%;
 }
-
-.aui-col-5 {
-	width: 20%;
-}

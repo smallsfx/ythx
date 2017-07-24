@@ -1,28 +1,19 @@
 //index.js 
-var contacts = require('../../lib/data/contacts');
-var messages = require('../../lib/data/messages');
+var contacts = require('../../lib/data/attr-contacts');
+var messages = require('../../lib/data/attr-messages');
+var sysinfo = wx.getSystemInfoSync();
+const tabbar_height = 43;
 //获取应用实例  
 var app = getApp()
 Page({
   data: {
-    winHeight: 0,
+    tabHeight: sysinfo.windowHeight - tabbar_height,
     tab: 0,
     groups: contacts.filter(''),
     messages: messages,
   },
   onLoad: function () {
-    var that = this;
 
-    /** 
-     * 获取系统信息 
-     */
-    wx.getSystemInfo({
-      success: function (res) {
-        that.setData({
-          winHeight: res.windowHeight
-        });
-      }
-    });
   },
   /** 
    * 滑动切换tab 
@@ -45,6 +36,7 @@ Page({
       })
     }
   },
+
   onCharset: function (e) {
     this.setData({
       toView: e.target.dataset.charset
