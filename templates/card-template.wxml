@@ -1,7 +1,7 @@
 <import src="/templates/evaluate.wxml" />
 <!-- 活动卡片模版 -->
 <template name="CARD-ACTIVITY">
-  <navigator url="/pages/activity/details/details?id={{id}}" class="aui-card-content aui-border-b">
+  <navigator url="/pages/activity/details/details?id={{id}}" class="aui-card-content aui-margin-b-10">
     <image class='img-news' src="{{img}}" />
     <view class="aui-card-line">
       <text class="aui-ellipsis text-header flex">{{title}}</text>
@@ -15,7 +15,7 @@
 </template>
 <!-- 机构卡片模版 -->
 <template name="CARD-TRAINING">
-  <navigator url="/pages/training/details/details?id={{id}}" class="aui-card-content aui-border-b">
+  <navigator url="/pages/training/details/details?id={{id}}" class="aui-card-content aui-margin-b-10">
     <image class='img-news' src="{{img}}" />
     <view class="aui-card-line">
       <text class="aui-ellipsis text-header flex">{{title}}</text>
@@ -34,7 +34,7 @@
 </template>
 <!-- 学校卡片模版 -->
 <template name="CARD-SCHOOL">
-  <navigator url="/pages/school/details/details?id={{id}}" class="aui-card-content aui-border-b">
+  <navigator url="/pages/school/details/details?id={{id}}" class="aui-card-content aui-margin-b-10">
     <image class='img-news' src="{{img}}" />
     <view class="aui-card-line">
       <text class="aui-ellipsis text-header flex">{{title}}</text>

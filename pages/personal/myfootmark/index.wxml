@@ -1,2 +1,29 @@
-<!--index.wxml-->
-<text>index.wxml</text>
+<view class="cd-timeline-container">
+
+  <view wx:for-items="{{datas}}" wx:key="{{footmark}}" wx:for-item="footmark" class="cd-timeline-block">
+    <view class="cd-timeline-time">{{footmark.time}}</view>
+    <view class="{{footmark.share?'cd-timeline-share':'cd-timeline-cycle'}}" />
+    <view class="cd-timeline-body">
+      <view wx:if="{{footmark.text}}" class="cd-timeline-text">{{footmark.text}}</view>
+      <view wx:if="{{footmark.imgs}}" class="cd-timeline-image-container">
+        <view class="aui-row">
+          <image wx:for-items="{{footmark.imgs}}" wx:key="{{item}}" class='aui-col-4' src="{{item.img}}" />
+        </view>
+      </view>
+      <view class="cd-timeline-addr">{{footmark.addr.desc}}</view>
+
+      <view wx:if="{{footmark.reply}}" class="cd-timeline-reply">
+        <view wx:for-items="{{footmark.reply}}" wx:key="{{reply}}" wx:for-item="reply">
+          <text class="cd-timeline-reply-user">{{reply.user.name}}</text>
+          <block wx:if="{{reply.targetuser}}">
+            <text>回复</text>
+            <text class="cd-timeline-reply-user">{{reply.targetuser.name}}</text>
+          </block>
+          <text>:{{reply.text}}</text>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>

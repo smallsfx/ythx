@@ -155,7 +155,7 @@
     width:40px !important;
     height:40px;
 }
-.aui-col-6>image{
+/* .aui-col-6>image{
     width:16px !important;
     height:16px;
-}
+} */

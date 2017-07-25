@@ -2,7 +2,7 @@ var active = require('../../lib/core/active');
 var filterConst = require('../../lib/data/filter');
 var sysinfo = wx.getSystemInfoSync();
 const tabbar_height = 43;
-const menubar_height = 31;
+const menubar_height = 40;
 const search_height = 50;
 
 let filters = {

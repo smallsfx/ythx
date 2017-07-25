@@ -29,3 +29,7 @@
   padding-top: 14rpx;
   white-space: nowrap;
 }
+
+swiper {
+  height: 200px
+}

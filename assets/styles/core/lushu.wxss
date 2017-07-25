@@ -1,0 +1,119 @@
+.cd-timeline-container {
+  position: relative;
+  padding: 2em 0;
+  /* margin-bottom: 2em; */
+  background-color: white;
+}
+
+.cd-timeline-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.cd-timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 60px;
+  height: 100%;
+  width: 2px;
+  background: #FF8A57;
+}
+
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+  padding-left: 50px;
+}
+
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+
+.cd-timeline-block .cd-timeline-time {
+  position: absolute;
+  font-size: 25rpx;
+  left: 20rpx;
+  text-align: right;
+  display: inline-block;
+  color: #545454;
+}
+
+.cd-timeline-block .cd-timeline-cycle, .cd-timeline-block .cd-timeline-share {
+  position: absolute;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid 2px #ff8a57;
+}
+
+.cd-timeline-block .cd-timeline-share {
+  background: #FF8A57;
+}
+
+.cd-timeline-block .cd-timeline-body {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20rpx;
+  padding-bottom: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  border-bottom: solid 1rpx #ccc;
+}
+
+.cd-timeline-block .cd-timeline-body .cd-timeline-text {
+  color: #545454;
+  font-size: 30rpx;
+}
+
+.cd-timeline-block .cd-timeline-body .cd-timeline-image-container {
+  padding-top: 1em;
+}
+
+.cd-timeline-block .cd-timeline-body .cd-timeline-image-container image {
+  height: 60px;
+  padding-left: 5px;
+}
+
+.cd-timeline-block .cd-timeline-body .cd-timeline-image-container image:first-child {
+  padding-left: 0px;
+}
+
+.cd-timeline-block .cd-timeline-body .cd-timeline-addr {
+  padding-top: 1.5em;
+  font-size: 25rpx;
+  color: #FF8A57;
+}
+
+.cd-timeline-block .cd-timeline-body .cd-timeline-reply {
+  padding: 15rpx;
+  background-color: #eee;
+}
+
+.cd-timeline-block .cd-timeline-body .cd-timeline-reply view {
+  line-height: 30rpx;
+}
+
+.cd-timeline-block .cd-timeline-body .cd-timeline-reply text {
+  font-size: 25rpx;
+}
+
+.cd-timeline-block .cd-timeline-body .cd-timeline-reply .cd-timeline-reply-user {
+  color: #ff8a57;
+}
+
+.cd-timeline-block .cd-timeline-body .cd-timeline-reply .cd-timeline-reply-text {
+  color: #545454;
+}

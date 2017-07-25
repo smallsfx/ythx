@@ -2,7 +2,7 @@
 <import src="/templates/center-line-template.wxml" />
 
 <!-- swiper -->
-<swiper autoplay indicator-dots style="height:200px" interval="5000" duration="1000">
+<swiper autoplay indicator-dots interval="5000" duration="1000">
   <block wx:for="{{hots}}" wx:key="{{hot.id}}" wx:for-item='hot'>
     <swiper-item>
       <image src="{{hot.img}}" class="aui-swiper-image" />
@@ -19,7 +19,7 @@
 
 <template is="center-line" data="{{text:'猜你喜欢'}}" />
 <!--页面主体-->
-<block wx:for-items="{{news}}" wx:for-index="idx" wx:key="{{item.id}}">
+<block wx:for-items="{{items}}" wx:for-index="idx" wx:key="{{item.id}}">
   <template wx:if="{{item.type == 'ACTIVITY'}}" is="CARD-ACTIVITY" data="{{...item}}" />
   <template wx:elif="{{item.type == 'TRAINING'}}" is="CARD-TRAINING" data="{{...item}}" />
   <template wx:elif="{{item.type == 'SCHOOL'}}" is="CARD-SCHOOL" data="{{...item}}" />

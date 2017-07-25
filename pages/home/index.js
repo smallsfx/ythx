@@ -12,49 +12,27 @@ var active = require('../../lib/core/active');
 
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-
   data: {
-    /** 页面数据 */
-    types: [],
-    news: [],
-    hots: [],
+    items: [],
+    types: active.getTypes(),
+    hots: active.getHots(),
   },
 
   onLoad: function (options) {
+
+  },
+
+  onShow: function (options) {
+    console.log('home/index.onShow.begin');
     this.setData({
-      news: active.select(),
-      types: active.getTypes(),
-      hots: active.getHots(),
+      items: active.select(),
     });
+    console.log('home/index.onShow.end');
   },
 
   onTypeTap: (e) => {
     wx.setStorageSync('FIND-TYPE', e.currentTarget.dataset.type);
     wx.switchTab({ url: '../find/index' });
   },
-
-  /**
-   * 页面下拉时触发：
-   */
-  onPullDownRefresh: function () {
-    wx.showToast({
-      title: '正在加载数据...',
-      icon: 'loading'
-    })
-  },
-
-  /**
-   * 停止页面下拉时触发：
-   */
-  stopPullDownRefresh: function () {
-    wx.stopPullDownRefresh({
-      complete: function (res) {
-        wx.hideToast();
-      }
-    })
-  }
 
 })

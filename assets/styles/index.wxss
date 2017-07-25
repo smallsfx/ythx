@@ -18,6 +18,8 @@
 @import "core/list.wxss";
 @import "core/margin-padding.wxss";
 @import "core/tab.wxss";
+@import "core/lushu.wxss";
+
 
 /*文字对齐*/
 
@@ -184,6 +186,10 @@ text {
   /*height:150px;*/
 }
 
+.column-2 {
+  column-count: 2;
+}
+
 contact-button {
   width: 100%;
 }
@@ -198,7 +204,7 @@ contact-button {
   align-items: center;
   background-color: #fff;
   padding-top: 15px;
-  padding-bottom:5px;
+  padding-bottom: 5px;
 }
 
 .center-line text {
@@ -212,4 +218,23 @@ contact-button {
   height: 1px;
   background-color: #eee;
   /* margin: 0 10px; */
+}
+
+.user-card-container {}
+
+.user-card {
+  display: flex;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.user-card-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.user-card-content {
+  margin-left: 20rpx;
+  font-size: 25rpx;
 }

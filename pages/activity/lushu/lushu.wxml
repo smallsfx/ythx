@@ -1,2 +1,92 @@
-<!--lushu.wxml-->
-<text>活动路书：正在进行中及已经完成的活动才会有路书</text>
+<view class="cd-timeline-container">
+  <view class="cd-timeline-block">
+    <view class="cd-timeline-time">14:30</view>
+    <view class="cd-timeline-cycle" />
+    <view class="cd-timeline-body">
+
+      <view class="cd-timeline-text">这里应该写一些关于本条足迹的介绍或者心得， 内容多少不做限制。</view>
+
+      <view class="cd-timeline-image-container">
+        <view class="aui-row">
+          <image class='aui-col-4' src="/assets/news/a-3.jpg" />
+          <image class='aui-col-4' src="/assets/news/a-2.jpg" />
+          <image class='aui-col-4' src="/assets/news/a-1.jpg" />
+        </view>
+      </view>
+
+      <view class="cd-timeline-addr">沈阳市 - 和平区 - 中山公园</view>
+
+      <view class="cd-timeline-reply">
+        <view>
+          <text class="cd-timeline-reply-user">汇通宝宝</text>
+          <text>:看样子风景不错哟。</text>
+        </view>
+        <view>
+          <text class="cd-timeline-reply-user">我</text>
+          <text>回复</text>
+          <text class="cd-timeline-reply-user">汇通宝宝</text>
+          <text>:拍照水平有限,实际风景更好!!!</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="cd-timeline-block">
+    <view class="cd-timeline-time">14:30</view>
+    <view class="cd-timeline-cycle" />
+    <view class="cd-timeline-body">
+
+      <view class="cd-timeline-text">这里应该写一些关于本条足迹的介绍或者心得， 内容多少不做限制。</view>
+
+      <view class="cd-timeline-addr">沈阳市 - 和平区 - 中山公园</view>
+
+    </view>
+  </view>
+
+  <view class="cd-timeline-block">
+    <view class="cd-timeline-time">14:30</view>
+    <view class="cd-timeline-cycle" />
+    <view class="cd-timeline-body">
+
+      <view class="cd-timeline-text">这里应该写一些关于本条足迹的介绍或者心得， 内容多少不做限制。</view>
+
+      <view class="cd-timeline-addr">沈阳市 - 和平区 - 中山公园</view>
+
+      <view class="cd-timeline-reply">
+        <view>
+          <text class="cd-timeline-reply-user">汇通宝宝</text>
+          <text>:看样子风景不错哟。</text>
+        </view>
+        <view>
+          <text class="cd-timeline-reply-user">我</text>
+          <text>回复</text>
+          <text class="cd-timeline-reply-user">汇通宝宝</text>
+          <text>:拍照水平有限,实际风景更好!!!</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="cd-timeline-block">
+    <view class="cd-timeline-time">14:30</view>
+    <view class="cd-timeline-cycle" />
+    <view class="cd-timeline-body">
+
+      <view class="cd-timeline-text">这里应该写一些关于本条足迹的介绍或者心得， 内容多少不做限制。</view>
+
+      <view class="cd-timeline-image-container">
+        <view class="aui-row">
+          <image class='aui-col-4' src="/assets/news/a-3.jpg" />
+          <image class='aui-col-4' src="/assets/news/a-2.jpg" />
+          <image class='aui-col-4' src="/assets/news/a-1.jpg" />
+        </view>
+      </view>
+
+      <view class="cd-timeline-addr">沈阳市 - 和平区 - 中山公园</view>
+
+    </view>
+  </view>
+
+</view>

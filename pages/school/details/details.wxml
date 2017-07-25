@@ -30,19 +30,65 @@
     <text class="text-msg-right">{{item.evaluate.count}}人评论</text>
   </navigator>
 
+    <!--身边的人-->
+  <navigator url="../sign-up-list/sign-up-list?id={{item.id}}" class="aui-card-header aui-card-arrow aui-border-t aui-margin-t-10">
+    <text class="text-title">身边的人</text>
+  </navigator>
+  <!--身边的人列表-->
+  <view class="aui-card-content-padded aui-border-b">
+
+    <view class="aui-row aui-row-padded">
+
+      <view class="aui-col-6 user-card">
+        <image class="user-card-avatar" src="/assets/head-icon/avatar1.jpg" />
+        <view class="user-card-content">
+          <view class="text-addr">英语班(一)</view>
+          <view class="text-addr">2017年1月 入学</view>
+        </view>
+      </view>
+
+      <view class="aui-col-6 user-card">
+        <image class="user-card-avatar" src="/assets/head-icon/avatar2.jpg" />
+        <view class="user-card-content">
+          <view class="text-addr">英语班(一)</view>
+          <view class="text-addr">2017年1月 入学</view>
+        </view>
+      </view>
+
+      <view class="aui-col-6 user-card">
+        <image class="user-card-avatar" src="/assets/head-icon/avatar3.jpg" />
+        <view class="user-card-content">
+          <view class="text-addr">英语班(一)</view>
+          <view class="text-addr">2017年1月 入学</view>
+        </view>
+      </view>
+
+      <view class="aui-col-6 user-card">
+        <image class="user-card-avatar" src="/assets/head-icon/avatar4.jpg" />
+        <view class="user-card-content">
+          <view class="text-addr">英语班(一)</view>
+          <view class="text-addr">2017年1月 入学</view>
+        </view>
+      </view>
+
+      <!--<block wx:for-items="{{item.signup.list}}" wx:key="{{user.id}}" wx:for-item="user">
+        <image class='round-img' src="{{user.img}}" style="flex:1" />
+      </block>-->
+    </view>
+
+  </view>
+
   <navigator url="./details-more?t=0&id={{item.id}}" class="aui-card-footer aui-text-center">
-    查看更多活动信息
+    查看更多信息
   </navigator>
 
 </scroll-view>
 
 <view class="aui-footbar">
-  <button bindtap="onCall" class="aui-footbar-item">
-    <image src="/assets/images/bar-telphone.png" />
-    <text>电话</text>
-  </button>
-  <button class="aui-footbar-item" open-type="contact">
-    <image src="/assets/images/bar-talk.png" />
-    <text>留言</text>
-  </button>
+  <view bindtap="onCall" class="aui-footbar-item">
+    <image src="/assets/images/bar-telphone.png" />电话
+  </view>
+  <view class="aui-footbar-item" open-type="contact">
+    <image src="/assets/images/bar-talk.png" />留言
+  </view>
 </view>

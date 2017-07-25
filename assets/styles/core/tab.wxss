@@ -47,10 +47,10 @@
 /*MENU 选项卡容器样式*/
 
 .aui-menu {
-  width: 100%;
-  border-bottom: 2rpx solid #cccccc;
+  /* border-bottom: 1rpx solid #cccccc; */
   text-align: center;
   background-color: #fff;
+  margin: 5px 0 5px 0;
 }
 
 
@@ -61,7 +61,7 @@
   display: inline-block;
   width: 33.33%;
   color: #545454;
-  /* margin: 15rpx 0; */
+  /* margin: 0 5px; */
 }
 
 .aui-menu-item+.aui-menu-item {
