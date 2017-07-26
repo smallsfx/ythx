@@ -36,7 +36,7 @@ Page({
     let item = this.data.item;
     return {
       title: '我的足迹',
-      path: '/pages/personal/myfootmark/myfootmark',
+      path: '/pages/personal/myfootmark/index',
       success: function (res) {
         // 转发成功
       },

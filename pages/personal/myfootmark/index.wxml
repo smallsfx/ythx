@@ -1,7 +1,9 @@
+<view class="fixed-top">2015年6月12日</view>
 <view class="cd-timeline-container">
-
   <view wx:for-items="{{datas}}" wx:key="{{footmark}}" wx:for-item="footmark" class="cd-timeline-block">
-    <view class="cd-timeline-time">{{footmark.time}}</view>
+    <view class="cd-timeline-time">
+      <view>{{footmark.time}}</view>
+    </view>
     <view class="{{footmark.share?'cd-timeline-share':'cd-timeline-cycle'}}" />
     <view class="cd-timeline-body">
       <view wx:if="{{footmark.text}}" class="cd-timeline-text">{{footmark.text}}</view>
